@@ -13,18 +13,20 @@
         }
         
         :root {
-            --primary: #8A2BE2;    /* Creative purple */
-            --secondary: #FF6B8B;  /* Energetic pink */
-            --dark: #2C2C54;       /* Deep navy */
-            --light: #F7F7F7;      /* Light background */
-            --accent: #00CED1;     /* Teal accent */
+            --cherry: #B03060;       /* Elegant cherry red */
+            --deep-burgundy: #722F37; /* Sophisticated dark cherry */
+            --blush: #F7DAD9;        /* Soft cherry blossom */
+            --gold: #D4AF37;         /* Warm gold accents */
+            --dark: #2C1A1D;         /* Rich dark brown */
+            --light: #FAF5F0;        /* Cream background */
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
             color: var(--dark);
             scroll-behavior: smooth;
+            background: var(--light);
         }
         
         /* Navigation */
@@ -32,27 +34,31 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(44, 44, 84, 0.95);
-            padding: 1rem 0;
+            background: rgba(44, 26, 29, 0.95);
+            padding: 1.2rem 0;
             z-index: 1000;
             backdrop-filter: blur(10px);
+            text-align: center;
+            border-bottom: 2px solid var(--gold);
         }
         
         nav a {
-            color: white;
+            color: var(--blush);
             text-decoration: none;
-            margin: 0 1.5rem;
+            margin: 0 1.8rem;
             font-weight: 500;
+            font-size: 1.1rem;
             transition: color 0.3s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         nav a:hover {
-            color: var(--accent);
+            color: var(--gold);
         }
         
         /* Sections */
         section {
-            padding: 100px 20px;
+            padding: 120px 20px;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -60,27 +66,56 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
+            background: linear-gradient(135deg, var(--deep-burgundy), var(--cherry));
+            color: var(--blush);
             text-align: center;
+            position: relative;
         }
         
         .hero h1 {
-            font-size: 4rem;
+            font-size: 4.5rem;
             margin-bottom: 1rem;
             animation: fadeInUp 1s ease;
+            font-weight: 300;
+            letter-spacing: 2px;
         }
         
         .hero p {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 2rem;
             animation: fadeInUp 1s ease 0.2s both;
+            font-style: italic;
+        }
+        
+        .hero .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+        
+        /* Section Headers */
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--deep-burgundy);
+            font-weight: 300;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 2px;
+            background: var(--gold);
+            margin: 1rem auto;
         }
         
         /* Music Section */
@@ -88,15 +123,21 @@
             background: var(--light);
         }
         
+        /* Podcast Section */
+        .podcast-section {
+            background: linear-gradient(135deg, var(--dark), var(--deep-burgundy));
+            color: var(--blush);
+        }
+        
         /* Tech Section */
         .tech-section {
-            background: white;
+            background: var(--light);
         }
         
         /* Fashion Section */
         .fashion-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--cherry), var(--deep-burgundy));
+            color: var(--blush);
         }
         
         /* Writing Section */
@@ -107,19 +148,76 @@
         /* Contact Section */
         .contact-section {
             background: var(--dark);
-            color: white;
+            color: var(--blush);
             text-align: center;
         }
         
-        .social-links a {
+        /* Content Cards */
+        .content-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(178, 48, 96, 0.1);
+            border-left: 4px solid var(--cherry);
+        }
+        
+        .transparent-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Streaming Links */
+        .streaming-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .streaming-links a {
+            background: var(--cherry);
             color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 2px solid var(--cherry);
+        }
+        
+        .streaming-links a:hover {
+            background: transparent;
+            color: var(--cherry);
+        }
+        
+        /* Social Links */
+        .social-links a {
+            color: var(--blush);
             font-size: 2rem;
             margin: 0 1rem;
             transition: color 0.3s;
         }
         
         .social-links a:hover {
-            color: var(--accent);
+            color: var(--gold);
+        }
+        
+        /* Book Cards */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .book-card {
+            background: var(--blush);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 4px solid var(--gold);
         }
         
         @keyframes fadeInUp {
@@ -132,13 +230,25 @@
                 transform: translateY(0);
             }
         }
+        
+        /* Ma Cheris Callout */
+        .cheris-callout {
+            background: var(--gold);
+            color: var(--dark);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 1rem 0;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav style="text-align: center;">
+    <nav>
         <a href="#home">Home</a>
         <a href="#music">Music</a>
+        <a href="#podcast">Podcast</a>
         <a href="#tech">Tech</a>
         <a href="#fashion">Fashion</a>
         <a href="#writing">Writing</a>
@@ -149,30 +259,67 @@
     <section id="home" class="hero">
         <div class="container">
             <h1>Xaviera</h1>
-            <p>Singer • Developer • Fashion Designer • Author</p>
-            <p style="font-size: 1.2rem;">Multidisciplinary creative blending technology with artistry</p>
+            <p>Artist • Developer • Visionary • Storyteller</p>
+            <p class="tagline">Blending technology with soulful creativity across multiple disciplines</p>
+            <div class="cheris-callout">
+                To my Ma Cheris - my loves, my inspiration
+            </div>
         </div>
     </section>
 
     <!-- Music Section -->
     <section id="music" class="music-section">
         <div class="container">
-            <h2 style="color: var(--primary); margin-bottom: 2rem;">🎵 The Artist</h2>
-            <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                <h3 style="color: var(--secondary); margin-bottom: 1rem;">My Music Journey</h3>
-                <p style="margin-bottom: 1.5rem;">[Your music story here - when you started, your style, inspirations]</p>
+            <h2>🎵 The Artist's Journey</h2>
+            <div class="content-card">
+                <h3 style="color: var(--cherry); margin-bottom: 1.5rem; font-size: 1.8rem;">A Voice That Transcends Genres</h3>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">
+                    From my earliest memories, music has been the heartbeat of my soul. Drawing inspiration from Neo Soul, Hip Hop, and R&B, 
+                    I create music that speaks truth to the human experience. Through every challenge and triumph, I've never let obstacles 
+                    dim the fire of my artistic passion.
+                </p>
                 
-                <h4 style="color: var(--dark); margin-bottom: 1rem;">Stream My Music</h4>
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <!-- Add your streaming links -->
-                    <a href="#" style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">Spotify</a>
-                    <a href="#" style="background: var(--secondary); color: white; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">Apple Music</a>
-                    <a href="#" style="background: var(--accent); color: white; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">SoundCloud</a>
+                <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem; font-size: 1.3rem;">Stream My Music Worldwide</h4>
+                <p style="margin-bottom: 1.5rem; font-style: italic;">Available on all major platforms through DistroKid</p>
+                
+                <div class="streaming-links">
+                    <a href="#"><i class="fab fa-spotify"></i> Spotify</a>
+                    <a href="#"><i class="fab fa-apple"></i> Apple Music</a>
+                    <a href="#"><i class="fab fa-youtube"></i> YouTube Music</a>
+                    <a href="#" style="background: var(--deep-burgundy); border-color: var(--deep-burgundy);">All Platforms</a>
                 </div>
                 
                 <div style="margin-top: 2rem;">
-                    <h4 style="color: var(--dark); margin-bottom: 1rem;">Live Performances</h4>
-                    <p>[Add your performance photos and stories here]</p>
+                    <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem; font-size: 1.3rem;">Live Performances</h4>
+                    <p>[Your performance photos will be displayed here - capturing the energy and connection of live shows]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcast Section -->
+    <section id="podcast" class="podcast-section">
+        <div class="container">
+            <h2 style="color: var(--blush);">🎙️ The Podcast</h2>
+            <div class="transparent-card">
+                <h3 style="margin-bottom: 1.5rem; font-size: 1.8rem;">Conversations That Matter</h3>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">
+                    Join me in intimate conversations exploring creativity, spirituality, and the journey of multi-passionate living. 
+                    Each episode is a space for authentic storytelling and meaningful connections.
+                </p>
+                
+                <div style="background: rgba(212, 175, 55, 0.2); padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                    <h4 style="color: var(--gold); margin-bottom: 1rem;">🎧 Watch Now & Stay Tuned</h4>
+                    <p>New episodes coming soon - subscribe so you don't miss the next chapter of our conversation</p>
+                </div>
+                
+                <div class="streaming-links">
+                    <a href="#" style="background: var(--gold); color: var(--dark); border-color: var(--gold);">
+                        <i class="fab fa-youtube"></i> Watch Here
+                    </a>
+                    <a href="#" style="background: transparent; color: var(--gold); border: 2px solid var(--gold);">
+                        Subscribe for Updates
+                    </a>
                 </div>
             </div>
         </div>
@@ -181,23 +328,38 @@
     <!-- Tech Section -->
     <section id="tech" class="tech-section">
         <div class="container">
-            <h2 style="color: var(--primary); margin-bottom: 2rem;">💻 The Developer</h2>
-            <div style="background: var(--light); padding: 2rem; border-radius: 10px;">
-                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Education & Skills</h3>
-                <p style="margin-bottom: 1rem;">Currently completing my accredited 1-year National Qualification in App Development at IT varsity</p>
+            <h2>💻 The Developer</h2>
+            <div class="content-card">
+                <h3 style="color: var(--cherry); margin-bottom: 1.5rem; font-size: 1.8rem;">Building Digital Worlds</h3>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">
+                    Currently completing my accredited 1-year National Qualification in App Development at IT varsity, 
+                    I've immersed myself in the art of creation through code. From interactive recipe books to engaging puzzles 
+                    and dynamic superhero applications, each project represents a new frontier of learning.
+                </p>
                 
-                <h4 style="color: var(--dark); margin-bottom: 1rem;">Technical Skills</h4>
-                <ul style="list-style: none; columns: 2;">
-                    <li>✅ Web Development</li>
-                    <li>✅ App Development</li>
-                    <li>✅ UI/UX Design</li>
-                    <li>✅ [Add your specific technologies]</li>
-                </ul>
-                
-                <div style="margin-top: 2rem;">
-                    <h4 style="color: var(--dark); margin-bottom: 1rem;">Projects</h4>
-                    <p>[Showcase your coding projects here - even small ones from varsity!]</p>
+                <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem; font-size: 1.3rem;">Technical Expertise</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+                    <div style="text-align: center; padding: 1rem; background: var(--blush); border-radius: 8px;">
+                        <i class="fab fa-html5" style="color: var(--cherry); font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                        <p>HTML/CSS</p>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: var(--blush); border-radius: 8px;">
+                        <i class="fab fa-js" style="color: var(--cherry); font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                        <p>JavaScript</p>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: var(--blush); border-radius: 8px;">
+                        <i class="fab fa-react" style="color: var(--cherry); font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                        <p>React</p>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: var(--blush); border-radius: 8px;">
+                        <i class="fab fa-python" style="color: var(--cherry); font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                        <p>Python</p>
+                    </div>
                 </div>
+                
+                <p style="font-style: italic; text-align: center; margin-top: 1rem; color: var(--deep-burgundy);">
+                    "The beauty of development? Every day brings new possibilities to learn and create."
+                </p>
             </div>
         </div>
     </section>
@@ -205,16 +367,26 @@
     <!-- Fashion Section -->
     <section id="fashion" class="fashion-section">
         <div class="container">
-            <h2 style="margin-bottom: 2rem;">👗 The Fashion Visionary</h2>
-            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px; backdrop-filter: blur(10px);">
-                <h3 style="margin-bottom: 1rem;">Founder of La Takhaf</h3>
-                <p style="margin-bottom: 1.5rem;">[Your fashion philosophy - what does "La Takhaf" mean to you? Your design aesthetic]</p>
+            <h2 style="color: var(--blush);">👗 لا تخف - La Takhaf</h2>
+            <div class="transparent-card">
+                <h3 style="margin-bottom: 1.5rem; font-size: 1.8rem;">"Do Not Fear" - A Philosophy Woven in Fabric</h3>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
+                    لا تخف - two words that carry the weight of courage, the whisper of resilience, the promise of authenticity. 
+                    La Takhaf is more than a fashion label; it is a movement born from the soul, where every stitch tells a story of fearlessness.
+                </p>
                 
-                <h4 style="margin-bottom: 1rem;">Capsule Collection</h4>
-                <p>[Describe your design approach and vision. Talk about your creative process without naming specific companies]</p>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
+                    My designs emerge from the quiet spaces of the heart - intuitive creations that translate emotion into elegance, 
+                    transforming what I feel into what you wear. Each piece is a love letter to self-expression, a armor of beauty for the modern visionary.
+                </p>
                 
-                <div style="margin-top: 2rem;">
-                    <p><em>"Fashion is my canvas for storytelling and empowerment"</em></p>
+                <h4 style="margin-bottom: 1rem; font-size: 1.3rem;">The Capsule Collection</h4>
+                <p style="font-style: italic;">
+                    A curated expression of artistic vision - where fabric becomes poetry and design becomes dialogue
+                </p>
+                
+                <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(212, 175, 55, 0.1); border-radius: 8px; border-left: 3px solid var(--gold);">
+                    <p style="margin: 0; font-style: italic;">"Fashion is my canvas for storytelling and empowerment"</p>
                 </div>
             </div>
         </div>
@@ -223,24 +395,33 @@
     <!-- Writing Section -->
     <section id="writing" class="writing-section">
         <div class="container">
-            <h2 style="color: var(--primary); margin-bottom: 2rem;">📚 The Author</h2>
-            <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Literary World Coming Soon</h3>
-                <p style="margin-bottom: 1.5rem;">Three completed manuscripts waiting to find their home...</p>
+            <h2>📚 The Author's Desk</h2>
+            <div class="content-card">
+                <h3 style="color: var(--cherry); margin-bottom: 1.5rem; font-size: 1.8rem;">Words Waiting to Breathe</h3>
+                <p style="margin-bottom: 2rem; font-size: 1.1rem;">
+                    Three completed manuscripts rest in the quiet space between creation and revelation - 
+                    each a different facet of the human experience, each a piece of my soul given form through words.
+                </p>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                    <div style="background: var(--light); padding: 1.5rem; border-radius: 8px;">
-                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Book 1 Title</h4>
-                        <p>[Mysterious teaser about your first book]</p>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem;">Inspirational Wisdom</h4>
+                        <p>A collection of insights and quotes gathered from life's classroom</p>
                     </div>
-                    <div style="background: var(--light); padding: 1.5rem; border-radius: 8px;">
-                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Book 2 Title</h4>
-                        <p>[Intriguing hint about your second book]</p>
+                    <div class="book-card">
+                        <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem;">Spiritual Journey</h4>
+                        <p>The path within - exploring consciousness and divine connection</p>
                     </div>
-                    <div style="background: var(--light); padding: 1.5rem; border-radius: 8px;">
-                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Book 3 Title</h4>
-                        <p>[Compelling glimpse of your third book]</p>
+                    <div class="book-card">
+                        <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem;">Life at 30</h4>
+                        <p>A raw and beautiful memoir of three decades of becoming</p>
                     </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <p style="font-style: italic; color: var(--deep-burgundy);">
+                        "Some stories are meant to be shared when the world is ready to hear them"
+                    </p>
                 </div>
             </div>
         </div>
@@ -249,8 +430,11 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 style="margin-bottom: 1rem;">Let's Create Magic Together</h2>
-            <p style="margin-bottom: 2rem; font-size: 1.2rem;">Interested in collaboration? Have a project in mind? Let's connect!</p>
+            <h2 style="color: var(--blush);">Connect With Me</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Ready to collaborate on a project? Want to discuss music, fashion, technology, or storytelling? 
+                Let's create something extraordinary together.
+            </p>
             
             <div class="social-links" style="margin-bottom: 2rem;">
                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -258,9 +442,11 @@
                 <a href="#"><i class="fab fa-linkedin"></i></a>
                 <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fab fa-spotify"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
             
-            <p>Email: [your-email@domain.com]</p>
+            <p style="margin-bottom: 1rem;">Email: [your-email@domain.com]</p>
+            <p>For my Ma Cheris - thank you for being part of this journey</p>
         </div>
     </section>
 </body>
