@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xaviera - Creative Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #8A2BE2;    /* Creative purple */
+            --secondary: #FF6B8B;  /* Energetic pink */
+            --dark: #2C2C54;       /* Deep navy */
+            --light: #F7F7F7;      /* Light background */
+            --accent: #00CED1;     /* Teal accent */
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            scroll-behavior: smooth;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(44, 44, 84, 0.95);
+            padding: 1rem 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        /* Sections */
+        section {
+            padding: 100px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        
+        /* Music Section */
+        .music-section {
+            background: var(--light);
+        }
+        
+        /* Tech Section */
+        .tech-section {
+            background: white;
+        }
+        
+        /* Fashion Section */
+        .fashion-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        /* Writing Section */
+        .writing-section {
+            background: var(--light);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 2rem;
+            margin: 0 1rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav style="text-align: center;">
+        <a href="#home">Home</a>
+        <a href="#music">Music</a>
+        <a href="#tech">Tech</a>
+        <a href="#fashion">Fashion</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Connect</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Xaviera</h1>
+            <p>Singer • Developer • Fashion Designer • Author</p>
+            <p style="font-size: 1.2rem;">Multidisciplinary creative blending technology with artistry</p>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="music-section">
+        <div class="container">
+            <h2 style="color: var(--primary); margin-bottom: 2rem;">🎵 The Artist</h2>
+            <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <h3 style="color: var(--secondary); margin-bottom: 1rem;">My Music Journey</h3>
+                <p style="margin-bottom: 1.5rem;">[Your music story here - when you started, your style, inspirations]</p>
+                
+                <h4 style="color: var(--dark); margin-bottom: 1rem;">Stream My Music</h4>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <!-- Add your streaming links -->
+                    <a href="#" style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">Spotify</a>
+                    <a href="#" style="background: var(--secondary); color: white; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">Apple Music</a>
+                    <a href="#" style="background: var(--accent); color: white; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">SoundCloud</a>
+                </div>
+                
+                <div style="margin-top: 2rem;">
+                    <h4 style="color: var(--dark); margin-bottom: 1rem;">Live Performances</h4>
+                    <p>[Add your performance photos and stories here]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Section -->
+    <section id="tech" class="tech-section">
+        <div class="container">
+            <h2 style="color: var(--primary); margin-bottom: 2rem;">💻 The Developer</h2>
+            <div style="background: var(--light); padding: 2rem; border-radius: 10px;">
+                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Education & Skills</h3>
+                <p style="margin-bottom: 1rem;">Currently completing my accredited 1-year National Qualification in App Development at IT varsity</p>
+                
+                <h4 style="color: var(--dark); margin-bottom: 1rem;">Technical Skills</h4>
+                <ul style="list-style: none; columns: 2;">
+                    <li>✅ Web Development</li>
+                    <li>✅ App Development</li>
+                    <li>✅ UI/UX Design</li>
+                    <li>✅ [Add your specific technologies]</li>
+                </ul>
+                
+                <div style="margin-top: 2rem;">
+                    <h4 style="color: var(--dark); margin-bottom: 1rem;">Projects</h4>
+                    <p>[Showcase your coding projects here - even small ones from varsity!]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fashion Section -->
+    <section id="fashion" class="fashion-section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">👗 The Fashion Visionary</h2>
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px; backdrop-filter: blur(10px);">
+                <h3 style="margin-bottom: 1rem;">Founder of La Takhaf</h3>
+                <p style="margin-bottom: 1.5rem;">[Your fashion philosophy - what does "La Takhaf" mean to you? Your design aesthetic]</p>
+                
+                <h4 style="margin-bottom: 1rem;">Capsule Collection</h4>
+                <p>[Describe your design approach and vision. Talk about your creative process without naming specific companies]</p>
+                
+                <div style="margin-top: 2rem;">
+                    <p><em>"Fashion is my canvas for storytelling and empowerment"</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Writing Section -->
+    <section id="writing" class="writing-section">
+        <div class="container">
+            <h2 style="color: var(--primary); margin-bottom: 2rem;">📚 The Author</h2>
+            <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Literary World Coming Soon</h3>
+                <p style="margin-bottom: 1.5rem;">Three completed manuscripts waiting to find their home...</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                    <div style="background: var(--light); padding: 1.5rem; border-radius: 8px;">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Book 1 Title</h4>
+                        <p>[Mysterious teaser about your first book]</p>
+                    </div>
+                    <div style="background: var(--light); padding: 1.5rem; border-radius: 8px;">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Book 2 Title</h4>
+                        <p>[Intriguing hint about your second book]</p>
+                    </div>
+                    <div style="background: var(--light); padding: 1.5rem; border-radius: 8px;">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Book 3 Title</h4>
+                        <p>[Compelling glimpse of your third book]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 style="margin-bottom: 1rem;">Let's Create Magic Together</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.2rem;">Interested in collaboration? Have a project in mind? Let's connect!</p>
+            
+            <div class="social-links" style="margin-bottom: 2rem;">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-spotify"></i></a>
+            </div>
+            
+            <p>Email: [your-email@domain.com]</p>
+        </div>
+    </section>
+</body>
+</html>
