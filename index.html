@@ -14,8 +14,8 @@
         }
         
         :root {
-            --dark-cherry: #7A1C3F;     /* Elegant dark cherry */
-            --deep-burgundy: #5A172C;   /* Rich burgundy */
+            --dark-plum: #5D0F28;     /* Rich plum dark cherry */
+            --deep-burgundy: #3D0A1A; /* Deeper burgundy */
             --cherry-blossom: #E8D4D0;  /* Soft blush */
             --vintage-gold: #C9A96A;    /* Antique gold */
             --charcoal: #2A2A2A;        /* Dark text */
@@ -47,7 +47,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(122, 28, 63, 0.95);
+            background: rgba(93, 15, 40, 0.95);
             padding: 1.2rem 0;
             z-index: 1000;
             backdrop-filter: blur(10px);
@@ -91,7 +91,7 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--deep-burgundy), var(--dark-cherry));
+            background: linear-gradient(135deg, var(--deep-burgundy), var(--dark-plum));
             color: var(--cherry-blossom);
             text-align: center;
             position: relative;
@@ -126,7 +126,7 @@
             font-size: 3.2rem;
             margin-bottom: 3rem;
             text-align: center;
-            color: var(--dark-cherry);
+            color: var(--dark-plum);
             font-weight: 500;
             position: relative;
         }
@@ -136,7 +136,7 @@
             display: block;
             width: 100px;
             height: 3px;
-            background: linear-gradient(90deg, var(--dark-cherry), var(--vintage-gold));
+            background: linear-gradient(90deg, var(--dark-plum), var(--vintage-gold));
             margin: 1.5rem auto;
             border-radius: 2px;
         }
@@ -146,8 +146,8 @@
             background: white;
             padding: 3rem;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(122, 28, 63, 0.08);
-            border: 1px solid rgba(122, 28, 63, 0.1);
+            box-shadow: 0 10px 30px rgba(93, 15, 40, 0.08);
+            border: 1px solid rgba(93, 15, 40, 0.1);
             margin-bottom: 2rem;
         }
         
@@ -156,7 +156,7 @@
             padding: 3rem;
             border-radius: 12px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(122, 28, 63, 0.2);
+            border: 1px solid rgba(93, 15, 40, 0.2);
             margin-bottom: 2rem;
         }
         
@@ -170,7 +170,7 @@
         }
         
         .streaming-links a {
-            background: linear-gradient(135deg, var(--dark-cherry), var(--deep-burgundy));
+            background: linear-gradient(135deg, var(--dark-plum), var(--deep-burgundy));
             color: white;
             padding: 1rem 2rem;
             border-radius: 30px;
@@ -185,10 +185,10 @@
         
         .streaming-links a:hover {
             background: transparent;
-            color: var(--dark-cherry);
-            border-color: var(--dark-cherry);
+            color: var(--dark-plum);
+            border-color: var(--dark-plum);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(122, 28, 63, 0.2);
+            box-shadow: 0 5px 15px rgba(93, 15, 40, 0.2);
         }
         
         /* Social Links */
@@ -200,7 +200,7 @@
         }
         
         .social-links a {
-            color: var(--dark-cherry);
+            color: var(--dark-plum);
             font-size: 2.2rem;
             transition: all 0.3s ease;
             padding: 0.5rem;
@@ -216,7 +216,7 @@
             background: white;
             padding: 2rem;
             border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(122, 28, 63, 0.1);
+            box-shadow: 0 8px 25px rgba(93, 15, 40, 0.1);
             margin: 2rem 0;
             text-align: center;
         }
@@ -240,7 +240,7 @@
             border-radius: 10px;
             text-align: center;
             border-top: 4px solid var(--vintage-gold);
-            box-shadow: 0 5px 20px rgba(122, 28, 63, 0.08);
+            box-shadow: 0 5px 20px rgba(93, 15, 40, 0.08);
             transition: transform 0.3s ease;
         }
         
@@ -262,7 +262,7 @@
             box-shadow: 0 4px 15px rgba(201, 169, 106, 0.3);
         }
         
-        /* Tech Skills Grid */
+        /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -279,7 +279,7 @@
         }
         
         .skill-card:hover {
-            background: var(--dark-cherry);
+            background: var(--dark-plum);
             color: white;
             transform: translateY(-5px);
         }
@@ -287,11 +287,28 @@
         .skill-card i {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: var(--dark-cherry);
+            color: var(--dark-plum);
         }
         
         .skill-card:hover i {
             color: var(--vintage-gold);
+        }
+        
+        /* Additional Skills */
+        .additional-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .skill-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid var(--vintage-gold);
+            box-shadow: 0 3px 15px rgba(93, 15, 40, 0.08);
         }
         
         /* Animations */
@@ -346,7 +363,7 @@
                 <p>Artist • Developer • Visionary • Storyteller</p>
                 <p class="tagline">Where technology meets soulful creativity across every medium</p>
                 <div class="cheris-callout">
-                    To my Ma Cheris - my loves, my eternal inspiration
+                    To Ma Cheris - my loves, my eternal inspiration
                 </div>
             </div>
         </section>
@@ -355,13 +372,14 @@
     <!-- Music Page -->
     <div id="music" class="page">
         <div class="container">
-            <h2>🎵 The Artist's Journey</h2>
+            <h2>🎵 Singer-Songwriter & Sound Artist</h2>
             <div class="content-card">
-                <h3 style="color: var(--dark-cherry); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">A Voice That Transcends Genres</h3>
+                <h3 style="color: var(--dark-plum); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Crafting Sonic Stories</h3>
                 <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
-                    From my earliest memories, music has been the heartbeat of my soul. Drawing inspiration from Neo Soul, Hip Hop, and R&B, 
-                    I create music that speaks truth to the human experience. Through every challenge and triumph, I've never let obstacles 
-                    dim the fire of my artistic passion.
+                    As a singer-songwriter, I pour my soul into every lyric and melody. Drawing from Neo Soul, Hip Hop, and R&B influences, 
+                    I create music that resonates with raw emotion and authentic storytelling. Beyond writing and performing, I've developed 
+                    skills in sound engineering - self-taught in minor mixing and mastering to ensure every track carries the exact emotional 
+                    weight I intend.
                 </p>
                 
                 <h4 style="color: var(--deep-burgundy); margin-bottom: 1.5rem; font-size: 1.4rem; font-family: 'Playfair Display', serif;">Stream My Music Worldwide</h4>
@@ -380,7 +398,7 @@
                 
                 <div style="margin-top: 3rem;">
                     <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem; font-size: 1.4rem; font-family: 'Playfair Display', serif;">Live Performances</h4>
-                    <p style="font-style: italic; text-align: center; color: var(--dark-cherry);">
+                    <p style="font-style: italic; text-align: center; color: var(--dark-plum);">
                         [Your performance photos will be displayed here - capturing the energy and connection of live shows]
                     </p>
                 </div>
@@ -393,7 +411,7 @@
         <div class="container">
             <h2>🎙️ Threads & Thoughts</h2>
             <div class="content-card">
-                <h3 style="color: var(--dark-cherry); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Conversations That Matter</h3>
+                <h3 style="color: var(--dark-plum); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Conversations That Matter</h3>
                 <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
                     Join me in intimate conversations exploring creativity, spirituality, and the journey of multi-passionate living. 
                     Each episode is a space for authentic storytelling and meaningful connections.
@@ -419,13 +437,12 @@
     <!-- Tech Page -->
     <div id="tech" class="page">
         <div class="container">
-            <h2>💻 The Developer</h2>
+            <h2>💻 App Developer & Creative Technologist</h2>
             <div class="content-card">
-                <h3 style="color: var(--dark-cherry); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Building Digital Worlds</h3>
+                <h3 style="color: var(--dark-plum); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Building Digital Experiences</h3>
                 <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
-                    Currently completing my accredited 1-year National Qualification in App Development at IT varsity, 
-                    I've immersed myself in the art of creation through code. From interactive recipe books to engaging puzzles 
-                    and dynamic superhero applications, each project represents a new frontier of learning.
+                    As an App Developer specializing in coding and web design, I create digital solutions that blend functionality with beautiful user experiences. 
+                    My journey in technology has equipped me with the skills to bring creative visions to life through code.
                 </p>
                 
                 <h4 style="color: var(--deep-burgundy); margin-bottom: 1.5rem; font-size: 1.4rem; font-family: 'Playfair Display', serif;">Technical Expertise</h4>
@@ -449,8 +466,25 @@
                     </div>
                 </div>
                 
+                <h4 style="color: var(--deep-burgundy); margin-bottom: 1.5rem; font-size: 1.4rem; font-family: 'Playfair Display', serif; margin-top: 2rem;">Additional Professional Skills</h4>
+                
+                <div class="additional-skills">
+                    <div class="skill-item">
+                        <h5 style="color: var(--dark-plum); margin-bottom: 0.5rem;">Public Speaking</h5>
+                        <p>Engaging storytelling and presentation across diverse audiences</p>
+                    </div>
+                    <div class="skill-item">
+                        <h5 style="color: var(--dark-plum); margin-bottom: 0.5rem;">Language & Communication</h5>
+                        <p>TEFL certified with expertise in clear, effective communication</p>
+                    </div>
+                    <div class="skill-item">
+                        <h5 style="color: var(--dark-plum); margin-bottom: 0.5rem;">Audio Production</h5>
+                        <p>Transcription and sound engineering for polished audio content</p>
+                    </div>
+                </div>
+                
                 <p style="font-style: italic; text-align: center; margin-top: 2rem; color: var(--deep-burgundy); font-family: 'Crimson Text', serif;">
-                    "The beauty of development? Every day brings new possibilities to learn and create."
+                    "Technology is my canvas for solving problems and creating beautiful digital experiences"
                 </p>
             </div>
         </div>
@@ -461,7 +495,7 @@
         <div class="container">
             <h2>👗 لا تخف - La Takhaf</h2>
             <div class="content-card">
-                <h3 style="color: var(--dark-cherry); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">"Do Not Fear" - A Philosophy Woven in Fabric</h3>
+                <h3 style="color: var(--dark-plum); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">"Do Not Fear" - A Philosophy Woven in Fabric</h3>
                 <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
                     لا تخف - two words that carry the weight of courage, the whisper of resilience, the promise of authenticity. 
                     La Takhaf is more than a fashion label; it is a movement born from the soul, where every stitch tells a story of fearlessness.
@@ -473,7 +507,7 @@
                 </p>
                 
                 <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem; font-size: 1.4rem; font-family: 'Playfair Display', serif;">The Capsule Collection</h4>
-                <p style="font-style: italic; text-align: center; color: var(--dark-cherry); margin-bottom: 2rem;">
+                <p style="font-style: italic; text-align: center; color: var(--dark-plum); margin-bottom: 2rem;">
                     A curated expression of artistic vision - where fabric becomes poetry and design becomes dialogue
                 </p>
                 
@@ -491,7 +525,7 @@
         <div class="container">
             <h2>📚 The Author's Desk</h2>
             <div class="content-card">
-                <h3 style="color: var(--dark-cherry); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Words Waiting to Breathe</h3>
+                <h3 style="color: var(--dark-plum); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Words Waiting to Breathe</h3>
                 <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.8;">
                     Three completed manuscripts rest in the quiet space between creation and revelation - 
                     each a different facet of the human experience, each a piece of my soul given form through words.
@@ -526,7 +560,7 @@
         <div class="container">
             <h2>Connect With Me</h2>
             <div class="content-card">
-                <h3 style="color: var(--dark-cherry); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Let's Create Magic Together</h3>
+                <h3 style="color: var(--dark-plum); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Let's Create Magic Together</h3>
                 <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.8; text-align: center;">
                     Ready to collaborate on a project? Want to discuss music, fashion, technology, or storytelling? 
                     Let's create something extraordinary together.
@@ -555,7 +589,7 @@
                 
                 <div style="text-align: center; margin-top: 2rem; padding: 2rem; background: var(--cherry-blossom); border-radius: 10px;">
                     <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Get In Touch</h4>
-                    <p style="font-size: 1.2rem; color: var(--dark-cherry); margin-bottom: 0.5rem;">
+                    <p style="font-size: 1.2rem; color: var(--dark-plum); margin-bottom: 0.5rem;">
                         <i class="fas fa-envelope"></i> executive.xavierawealth@outlook.com
                     </p>
                     <p style="font-size: 1.1rem; color: var(--deep-burgundy);">
@@ -564,7 +598,7 @@
                 </div>
                 
                 <div class="cheris-callout" style="margin: 2rem auto 0; display: inline-block;">
-                    For my Ma Cheris - thank you for being part of this journey
+                    For Ma Cheris - my loves, my eternal inspiration
                 </div>
             </div>
         </div>
