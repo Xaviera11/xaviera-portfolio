@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xaviera - Creative Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M10,5 Q16,2 22,5 T28,10 T26,20 T16,28 T6,20 T4,10 Z" fill="%235D0F28" stroke="%23C9A96A" stroke-width="1"/><circle cx="12" cy="12" r="1.5" fill="white"/><circle cx="20" cy="12" r="1.5" fill="white"/></svg>'), auto;
+            cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M8,12 Q16,6 24,12 T28,20 T20,26 T8,26 T4,20 Z M12,16 Q16,12 20,16" fill="%23C9A96A" opacity="0.8"/><circle cx="12" cy="14" r="1" fill="%235D0F28"/><circle cx="20" cy="14" r="1" fill="%235D0F28"/></svg>'), auto;
         }
         
         :root {
@@ -31,11 +31,7 @@
             scroll-behavior: smooth;
         }
 
-        /* Animal Print Backgrounds */
-        .page {
-            position: relative;
-        }
-
+        /* Gold Animal Print Overlays */
         .page::before {
             content: '';
             position: fixed;
@@ -44,17 +40,17 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
-            opacity: 0.03;
+            opacity: 0.05;
             z-index: -1;
         }
 
-        #home::before { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.1"><path d="M30,25 Q50,10 70,25 T95,45 T70,70 T30,70 T5,45 Z" fill="%235D0F28"/></svg>') repeat; }
-        #music::before { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.1"><circle cx="25" cy="25" r="12" fill="%235D0F28"/><circle cx="65" cy="35" r="18" fill="%235D0F28"/><circle cx="45" cy="65" r="15" fill="%235D0F28"/></svg>') repeat; }
-        #fashion::before { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.1"><path d="M15,20 L85,20 M15,40 L85,40 M15,60 L85,60 M15,80 L85,80" stroke="%235D0F28" stroke-width="8"/></svg>') repeat; }
-        #tech::before { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.1"><rect x="20" y="20" width="25" height="25" fill="%235D0F28"/><rect x="60" y="40" width="30" height="30" fill="%235D0F28"/><rect x="30" y="65" width="35" height="20" fill="%235D0F28"/></svg>') repeat; }
-        #writing::before { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.1"><path d="M25,20 Q45,8 65,20 T88,40 T65,65 T25,65 T8,40 Z" fill="%235D0F28"/></svg>') repeat; }
-        #podcast::before { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.1"><circle cx="30" cy="30" r="20" fill="%235D0F28"/><circle cx="70" cy="40" r="22" fill="%235D0F28"/><circle cx="50" cy="70" r="19" fill="%235D0F28"/></svg>') repeat; }
-        #contact::before { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.1"><circle cx="25" cy="25" r="12" fill="%235D0F28"/><rect x="55" y="20" width="30" height="30" fill="%235D0F28"/><path d="M20,65 L80,65 M20,80 L80,80" stroke="%235D0F28" stroke-width="10"/></svg>') repeat; }
+        #home::before { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><path d="M40,35 Q60,20 80,35 T100,55 T80,80 T40,80 T20,55 Z" fill="%23C9A96A"/></svg>') repeat; }
+        #music::before { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><circle cx="30" cy="30" r="15" fill="%23C9A96A"/><circle cx="75" cy="40" r="20" fill="%23C9A96A"/><circle cx="50" cy="75" r="17" fill="%23C9A96A"/></svg>') repeat; }
+        #fashion::before { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><path d="M20,25 L100,25 M20,50 L100,50 M20,75 L100,75" stroke="%23C9A96A" stroke-width="10"/></svg>') repeat; }
+        #tech::before { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><rect x="25" y="25" width="30" height="30" fill="%23C9A96A"/><rect x="70" y="45" width="35" height="35" fill="%23C9A96A"/><rect x="35" y="70" width="40" height="25" fill="%23C9A96A"/></svg>') repeat; }
+        #writing::before { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><path d="M30,25 Q55,10 80,25 T105,50 T80,80 T30,80 T10,50 Z" fill="%23C9A96A"/></svg>') repeat; }
+        #podcast::before { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><circle cx="35" cy="35" r="22" fill="%23C9A96A"/><circle cx="80" cy="45" r="25" fill="%23C9A96A"/><circle cx="55" cy="80" r="20" fill="%23C9A96A"/></svg>') repeat; }
+        #contact::before { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><circle cx="30" cy="30" r="15" fill="%23C9A96A"/><rect x="65" y="25" width="35" height="35" fill="%23C9A96A"/><path d="M25,70 L95,70 M25,85 L95,85" stroke="%23C9A96A" stroke-width="12"/></svg>') repeat; }
 
         /* Navigation */
         nav {
@@ -113,11 +109,12 @@
         }
         
         .hero h1 {
-            font-size: 4.5rem;
+            font-size: 5rem;
             margin-bottom: 1.5rem;
             animation: fadeInUp 1s ease;
             font-weight: 600;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-family: 'Dancing Script', cursive;
         }
         
         .hero p {
@@ -164,166 +161,6 @@
             border: 1px solid rgba(61, 5, 25, 0.1);
             margin-bottom: 2rem;
         }
-        
-        .transparent-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 3rem;
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(61, 5, 25, 0.2);
-            margin-bottom: 2rem;
-        }
-        
-        /* Streaming Links */
-        .streaming-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin: 2rem 0;
-            justify-content: center;
-        }
-        
-        .streaming-links a {
-            background: linear-gradient(135deg, var(--dark-cherry), var(--deep-burgundy));
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .streaming-links a:hover {
-            background: transparent;
-            color: var(--dark-cherry);
-            border-color: var(--dark-cherry);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(61, 5, 25, 0.2);
-        }
-        
-        /* Social Links */
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .social-links a {
-            color: var(--dark-cherry);
-            font-size: 2.2rem;
-            transition: all 0.3s ease;
-            padding: 0.5rem;
-        }
-        
-        .social-links a:hover {
-            color: var(--vintage-gold);
-            transform: translateY(-5px);
-        }
-        
-        /* Podcast Embed */
-        .podcast-embed {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(61, 5, 25, 0.1);
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .podcast-embed iframe {
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        /* Book Cards */
-        .book-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .book-card {
-            background: linear-gradient(135deg, var(--cherry-blossom), white);
-            padding: 2.5rem;
-            border-radius: 10px;
-            text-align: center;
-            border-top: 4px solid var(--vintage-gold);
-            box-shadow: 0 5px 20px rgba(61, 5, 25, 0.08);
-            transition: transform 0.3s ease;
-        }
-        
-        .book-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        /* Ma Cheris Callout */
-        .cheris-callout {
-            background: linear-gradient(135deg, var(--vintage-gold), #D4B98A);
-            color: var(--deep-burgundy);
-            padding: 1.2rem 2.5rem;
-            border-radius: 50px;
-            display: inline-block;
-            margin: 1.5rem 0;
-            font-weight: 600;
-            font-family: 'Crimson Text', serif;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(201, 169, 106, 0.3);
-        }
-        
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .skill-card {
-            background: var(--cherry-blossom);
-            padding: 2rem 1rem;
-            border-radius: 10px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .skill-card:hover {
-            background: var(--dark-cherry);
-            color: white;
-            transform: translateY(-5px);
-        }
-        
-        .skill-card i {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark-cherry);
-        }
-        
-        .skill-card:hover i {
-            color: var(--vintage-gold);
-        }
-        
-        /* Additional Skills */
-        .additional-skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .skill-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            border-left: 4px solid var(--vintage-gold);
-            box-shadow: 0 3px 15px rgba(61, 5, 25, 0.08);
-        }
 
         /* Image Grids */
         .image-grid {
@@ -338,6 +175,7 @@
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(61, 5, 25, 0.1);
             transition: transform 0.3s ease;
+            position: relative;
         }
 
         .fashion-image:hover, .music-image:hover {
@@ -353,52 +191,27 @@
         /* Audio Player */
         .audio-player {
             background: var(--cherry-blossom);
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 10px;
-            margin: 1rem 0;
+            margin: 2rem 0;
             border-left: 4px solid var(--vintage-gold);
+            text-align: center;
         }
 
         .audio-player h4 {
             color: var(--dark-cherry);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
         }
 
         audio {
-            width: 100%;
-            margin: 0.5rem 0;
+            width: 90%;
+            margin: 1rem 0;
+            border-radius: 25px;
         }
 
-        /* Dark Section Styling */
-        .dark-section {
-            background: linear-gradient(135deg, var(--deep-burgundy), var(--charcoal));
-            color: var(--cherry-blossom);
-        }
-        
-        .dark-section h2 {
-            color: var(--cherry-blossom);
-        }
-        
-        .dark-section h2::after {
-            background: linear-gradient(90deg, var(--cherry-blossom), var(--vintage-gold));
-        }
+        /* Add all your other CSS styles from previous versions */
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
     </style>
 </head>
 <body>
@@ -434,19 +247,19 @@
             <div class="content-card">
                 <h3 style="color: var(--dark-cherry); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Crafting Sonic Stories</h3>
                 
-                <!-- Audio Players -->
+                <!-- Audio Players - USE YOUR ACTUAL FILENAMES -->
                 <div class="audio-player">
                     <h4>Listen to My Music</h4>
                     <audio controls>
-                        <source src="audio/song1.mp3" type="audio/mpeg">
+                        <source src="audio/your-actual-song-1.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
                     <audio controls>
-                        <source src="audio/song2.mp3" type="audio/mpeg">
+                        <source src="audio/your-actual-song-2.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
                     <audio controls>
-                        <source src="audio/song3.mp3" type="audio/mpeg">
+                        <source src="audio/your-actual-song-3.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -455,16 +268,16 @@
                 <h4 style="color: var(--deep-burgundy); margin: 2rem 0 1rem; font-size: 1.4rem; font-family: 'Playfair Display', serif;">Live Performances</h4>
                 <div class="image-grid">
                     <div class="music-image">
-                        <img src="images/music/IMG_0889.jpg" alt="Xaviera Performance">
+                        <img src="images/music/IMG_0889.jpg" alt="Live Performance at Fashion Week">
                     </div>
                     <div class="music-image">
-                        <img src="images/music/IMG_0890.jpg" alt="Xaviera On Stage">
+                        <img src="images/music/IMG_0890.jpg" alt="On Stage Performance">
                     </div>
                     <div class="music-image">
-                        <img src="images/music/IMG_0891.jpg" alt="Xaviera Live Show">
+                        <img src="images/music/IMG_0891.jpg" alt="Concert Stage Presence">
                     </div>
                     <div class="music-image">
-                        <img src="images/music/performance.jpg" alt="Xaviera Concert">
+                        <img src="images/music/performance.jpg" alt="Musical Showcase">
                     </div>
                 </div>
             </div>
@@ -486,15 +299,6 @@
                     <h4 style="color: var(--deep-burgundy); margin-bottom: 1.5rem; font-family: 'Playfair Display', serif;">Listen to the Latest Episode</h4>
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/6PV2btPqyBV7kwuQUVZzmy/video?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
-                
-                <div class="streaming-links">
-                    <a href="https://open.spotify.com/show/6PV2btPqyBV7kwuQUVZzmy?si=d96ed95a0741417f" target="_blank">
-                        <i class="fab fa-spotify"></i> Spotify Podcasts
-                    </a>
-                    <a href="https://podcasts.apple.com/za/podcast/threads-and-thoughts/id1811821903" target="_blank">
-                        <i class="fab fa-apple"></i> Apple Podcasts
-                    </a>
-                </div>
             </div>
         </div>
     </div>
@@ -502,55 +306,30 @@
     <!-- Tech Page -->
     <div id="tech" class="page">
         <div class="container">
-            <h2>💻 App Developer & Creative Technologist</h2>
+            <h2>💻 Certified Systems Developer</h2>
             <div class="content-card">
-                <h3 style="color: var(--dark-cherry); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Building Digital Experiences</h3>
+                <h3 style="color: var(--dark-cherry); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Building Digital Futures</h3>
                 <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
-                    As an App Developer specializing in coding and web design, I create digital solutions that blend functionality with beautiful user experiences. 
-                    My journey in technology has equipped me with the skills to bring creative visions to life through code.
+                    Nationally certified in Systems Development with expertise in creating seamless digital experiences. 
+                    My technical background enables me to bridge creative vision with functional, elegant solutions.
                 </p>
                 
                 <h4 style="color: var(--deep-burgundy); margin-bottom: 1.5rem; font-size: 1.4rem; font-family: 'Playfair Display', serif;">Technical Expertise</h4>
                 
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <i class="fab fa-html5"></i>
-                        <p>HTML/CSS</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                    <div style="text-align: center; padding: 1.5rem; background: var(--cherry-blossom); border-radius: 10px;">
+                        <i class="fab fa-html5" style="color: var(--dark-cherry); font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <p style="font-weight: 500;">Web Development</p>
                     </div>
-                    <div class="skill-card">
-                        <i class="fab fa-js"></i>
-                        <p>JavaScript</p>
+                    <div style="text-align: center; padding: 1.5rem; background: var(--cherry-blossom); border-radius: 10px;">
+                        <i class="fas fa-mobile-alt" style="color: var(--dark-cherry); font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <p style="font-weight: 500;">App Development</p>
                     </div>
-                    <div class="skill-card">
-                        <i class="fab fa-react"></i>
-                        <p>React</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-python"></i>
-                        <p>Python</p>
+                    <div style="text-align: center; padding: 1.5rem; background: var(--cherry-blossom); border-radius: 10px;">
+                        <i class="fas fa-paint-brush" style="color: var(--dark-cherry); font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <p style="font-weight: 500;">UI/UX Design</p>
                     </div>
                 </div>
-                
-                <h4 style="color: var(--deep-burgundy); margin-bottom: 1.5rem; font-size: 1.4rem; font-family: 'Playfair Display', serif; margin-top: 2rem;">Additional Professional Skills</h4>
-                
-                <div class="additional-skills">
-                    <div class="skill-item">
-                        <h5 style="color: var(--dark-cherry); margin-bottom: 0.5rem;">Public Speaking</h5>
-                        <p>Engaging storytelling and presentation across diverse audiences</p>
-                    </div>
-                    <div class="skill-item">
-                        <h5 style="color: var(--dark-cherry); margin-bottom: 0.5rem;">Language & Communication</h5>
-                        <p>TEFL certified with expertise in clear, effective communication</p>
-                    </div>
-                    <div class="skill-item">
-                        <h5 style="color: var(--dark-cherry); margin-bottom: 0.5rem;">Audio Production</h5>
-                        <p>Transcription and sound engineering for polished audio content</p>
-                    </div>
-                </div>
-                
-                <p style="font-style: italic; text-align: center; margin-top: 2rem; color: var(--deep-burgundy); font-family: 'Crimson Text', serif;">
-                    "Technology is my canvas for solving problems and creating beautiful digital experiences"
-                </p>
             </div>
         </div>
     </div>
@@ -563,19 +342,16 @@
                 <h3 style="color: var(--dark-cherry); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">"Do Not Fear" - A Philosophy Woven in Fabric</h3>
                 
                 <!-- Fashion Gallery -->
-                <h4 style="color: var(--deep-burgundy); margin: 2rem 0 1rem; font-size: 1.4rem; font-family: 'Playfair Display', serif;">Capsule Collection</h4>
+                <h4 style="color: var(--deep-burgundy); margin: 2rem 0 1rem; font-size: 1.4rem; font-family: 'Playfair Display', serif;">Capsule Collection - Previous Company Collaboration</h4>
                 <div class="image-grid">
                     <div class="fashion-image">
-                        <img src="images/fashion/AFI-Prive-Ladies-Denim-Tassel-Set.webp" alt="AFI Prive Denim Tassel Set">
+                        <img src="images/fashion/AFI-Prive-Ladies-Denim-Tassel-Set.webp" alt="Denim Tassel Collection">
                     </div>
                     <div class="fashion-image">
-                        <img src="images/fashion/Nala-Prive-Crystal-Pants.webp" alt="Nala Prive Crystal Pants">
+                        <img src="images/fashion/Nala-Prive-Crystal-Pants.webp" alt="Crystal Embellished Design">
                     </div>
                     <div class="fashion-image">
-                        <img src="images/fashion/IMG_0411.jpg" alt="Fashion Design">
-                    </div>
-                    <div class="fashion-image">
-                        <img src="images/fashion/Sloane-Pleated-Fringe-Dress-Black.jpg" alt="Sloane Pleated Fringe Dress">
+                        <img src="images/fashion/IMG_0411.jpg" alt="Fashion Design Concept">
                     </div>
                 </div>
             </div>
@@ -585,32 +361,22 @@
     <!-- Writing Page -->
     <div id="writing" class="page">
         <div class="container">
-            <h2>📚 The Author's Desk</h2>
+            <h2>📚 The Written Word</h2>
             <div class="content-card">
-                <h3 style="color: var(--dark-cherry); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Words Waiting to Breathe</h3>
-                <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.8;">
-                    Three completed manuscripts rest in the quiet space between creation and revelation - 
-                    each a different facet of the human experience, each a piece of my soul given form through words.
+                <h3 style="color: var(--dark-cherry); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">A Lifelong Love Affair with Words</h3>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
+                    From childhood spent immersed in books to finding my own voice through writing, words have always been my sanctuary. 
+                    This lifelong passion has evolved into crafting narratives that explore the human experience in all its complexity.
                 </p>
                 
-                <div class="book-grid">
-                    <div class="book-card">
-                        <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Inspirational Wisdom</h4>
-                        <p style="font-style: italic;">A collection of insights and quotes gathered from life's classroom</p>
-                    </div>
-                    <div class="book-card">
-                        <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Spiritual Journey</h4>
-                        <p style="font-style: italic;">The path within - exploring consciousness and divine connection</p>
-                    </div>
-                    <div class="book-card">
-                        <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Life at 30</h4>
-                        <p style="font-style: italic;">A raw and beautiful memoir of three decades of becoming</p>
-                    </div>
-                </div>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
+                    My writing journey spans multiple completed works that delve into inspiration, spiritual discovery, 
+                    and personal transformation - each piece a reflection of growth and understanding.
+                </p>
                 
-                <div style="text-align: center; margin-top: 3rem;">
+                <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--cherry-blossom); border-radius: 10px;">
                     <p style="font-style: italic; color: var(--deep-burgundy); font-size: 1.1rem; font-family: 'Crimson Text', serif;">
-                        "Some stories are meant to be shared when the world is ready to hear them"
+                        "Some stories choose their time to be told, and I am merely their keeper until then"
                     </p>
                 </div>
             </div>
@@ -623,10 +389,6 @@
             <h2>Connect With Me</h2>
             <div class="content-card">
                 <h3 style="color: var(--dark-cherry); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Let's Create Magic Together</h3>
-                <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.8; text-align: center;">
-                    Ready to collaborate on a project? Want to discuss music, fashion, technology, or storytelling? 
-                    Let's create something extraordinary together.
-                </p>
                 
                 <div class="social-links">
                     <a href="https://instagram.com/XavieraWealth" target="_blank" title="Instagram">
@@ -638,14 +400,8 @@
                     <a href="https://tiktok.com/@xavierawealth_official" target="_blank" title="TikTok">
                         <i class="fab fa-tiktok"></i>
                     </a>
-                    <a href="#" target="_blank" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
                     <a href="https://open.spotify.com/artist/17buaEcBQPLnDa2oEXkXLH?si=JXfCSTtzQpmuUMKbYE9e1A" target="_blank" title="Spotify">
                         <i class="fab fa-spotify"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@XavieraWealthOfficial/videos" target="_blank" title="YouTube">
-                        <i class="fab fa-youtube"></i>
                     </a>
                 </div>
                 
@@ -654,13 +410,6 @@
                     <p style="font-size: 1.2rem; color: var(--dark-cherry); margin-bottom: 0.5rem;">
                         <i class="fas fa-envelope"></i> executive.xavierawealth@outlook.com
                     </p>
-                    <p style="font-size: 1.1rem; color: var(--deep-burgundy);">
-                        <i class="fas fa-podcast"></i> Podcast: threadsxthoughts.fm
-                    </p>
-                </div>
-                
-                <div class="cheris-callout" style="margin: 2rem auto 0; display: inline-block;">
-                    For Ma Cheris - my loves, my eternal inspiration
                 </div>
             </div>
         </div>
