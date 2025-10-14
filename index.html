@@ -14,12 +14,12 @@
         }
         
         :root {
-            --dark-plum: #5D0F28;     /* Rich plum dark cherry */
-            --deep-burgundy: #3D0A1A; /* Deeper burgundy */
-            --cherry-blossom: #E8D4D0;  /* Soft blush */
-            --vintage-gold: #C9A96A;    /* Antique gold */
-            --charcoal: #2A2A2A;        /* Dark text */
-            --cream: #FDF8F5;           /* Warm cream */
+            --dark-plum: #5D0F28;
+            --deep-burgundy: #3D0A1A;
+            --cherry-blossom: #E8D4D0;
+            --vintage-gold: #C9A96A;
+            --charcoal: #2A2A2A;
+            --cream: #FDF8F5;
         }
         
         body {
@@ -29,19 +29,24 @@
             background: var(--cream);
             scroll-behavior: smooth;
         }
-        
-        /* Elegant Typography */
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 500;
-            letter-spacing: 0.5px;
+
+        /* Animal Print Overlays */
+        .animal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.03;
+            z-index: -1;
         }
-        
-        .hero h1 {
-            font-family: 'Crimson Text', serif;
-            font-weight: 600;
-        }
-        
+
+        .home-animal { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M30,30 Q50,10 70,30 T90,50 T70,70 T30,70 T10,50 Z" fill="black"/></svg>') repeat; }
+        .music-animal { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="8" fill="black"/><circle cx="60" cy="30" r="12" fill="black"/><circle cx="40" cy="60" r="10" fill="black"/></svg>') repeat; }
+        .fashion-animal { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M10,10 L90,10 M10,30 L90,30 M10,50 L90,50 M10,70 L90,70" stroke="black" stroke-width="8"/></svg>') repeat; }
+        .tech-animal { background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="15" y="15" width="20" height="20" fill="black"/><rect x="55" y="35" width="25" height="25" fill="black"/><rect x="25" y="60" width="30" height="15" fill="black"/></svg>') repeat; }
+
         /* Navigation */
         nav {
             position: fixed;
@@ -78,6 +83,7 @@
             padding: 100px 20px 50px;
             min-height: 100vh;
             animation: fadeIn 0.8s ease;
+            position: relative;
         }
         
         .active {
@@ -114,33 +120,6 @@
             font-family: 'Crimson Text', serif;
         }
         
-        .hero .tagline {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease 0.4s both;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        /* Section Headers */
-        h2 {
-            font-size: 3.2rem;
-            margin-bottom: 3rem;
-            text-align: center;
-            color: var(--dark-plum);
-            font-weight: 500;
-            position: relative;
-        }
-        
-        h2::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--dark-plum), var(--vintage-gold));
-            margin: 1.5rem auto;
-            border-radius: 2px;
-        }
-        
         /* Content Cards */
         .content-card {
             background: white;
@@ -150,200 +129,62 @@
             border: 1px solid rgba(93, 15, 40, 0.1);
             margin-bottom: 2rem;
         }
-        
-        .transparent-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 3rem;
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(93, 15, 40, 0.2);
-            margin-bottom: 2rem;
-        }
-        
-        /* Streaming Links */
-        .streaming-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin: 2rem 0;
-            justify-content: center;
-        }
-        
-        .streaming-links a {
-            background: linear-gradient(135deg, var(--dark-plum), var(--deep-burgundy));
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .streaming-links a:hover {
-            background: transparent;
-            color: var(--dark-plum);
-            border-color: var(--dark-plum);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(93, 15, 40, 0.2);
-        }
-        
-        /* Social Links */
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .social-links a {
-            color: var(--dark-plum);
-            font-size: 2.2rem;
-            transition: all 0.3s ease;
-            padding: 0.5rem;
-        }
-        
-        .social-links a:hover {
-            color: var(--vintage-gold);
-            transform: translateY(-5px);
-        }
-        
-        /* Podcast Embed */
-        .podcast-embed {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(93, 15, 40, 0.1);
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .podcast-embed iframe {
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        /* Book Cards */
-        .book-grid {
+
+        /* Image Grids */
+        .image-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            margin: 2rem 0;
         }
-        
-        .book-card {
-            background: linear-gradient(135deg, var(--cherry-blossom), white);
-            padding: 2.5rem;
+
+        .fashion-image, .music-image {
             border-radius: 10px;
-            text-align: center;
-            border-top: 4px solid var(--vintage-gold);
-            box-shadow: 0 5px 20px rgba(93, 15, 40, 0.08);
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(93, 15, 40, 0.1);
             transition: transform 0.3s ease;
         }
-        
-        .book-card:hover {
+
+        .fashion-image:hover, .music-image:hover {
             transform: translateY(-5px);
         }
-        
-        /* Ma Cheris Callout */
-        .cheris-callout {
-            background: linear-gradient(135deg, var(--vintage-gold), #D4B98A);
-            color: var(--deep-burgundy);
-            padding: 1.2rem 2.5rem;
-            border-radius: 50px;
-            display: inline-block;
-            margin: 1.5rem 0;
-            font-weight: 600;
-            font-family: 'Crimson Text', serif;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(201, 169, 106, 0.3);
+
+        .fashion-image img, .music-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
         }
-        
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .skill-card {
+
+        /* Audio Player */
+        .audio-player {
             background: var(--cherry-blossom);
-            padding: 2rem 1rem;
-            border-radius: 10px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .skill-card:hover {
-            background: var(--dark-plum);
-            color: white;
-            transform: translateY(-5px);
-        }
-        
-        .skill-card i {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark-plum);
-        }
-        
-        .skill-card:hover i {
-            color: var(--vintage-gold);
-        }
-        
-        /* Additional Skills */
-        .additional-skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .skill-item {
-            background: white;
             padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
+            border-radius: 10px;
+            margin: 1rem 0;
             border-left: 4px solid var(--vintage-gold);
-            box-shadow: 0 3px 15px rgba(93, 15, 40, 0.08);
         }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        .audio-player h4 {
+            color: var(--dark-plum);
+            margin-bottom: 1rem;
         }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+
+        audio {
+            width: 100%;
+            margin: 0.5rem 0;
         }
-        
-        /* Dark Section Styling */
-        .dark-section {
-            background: linear-gradient(135deg, var(--deep-burgundy), var(--charcoal));
-            color: var(--cherry-blossom);
-        }
-        
-        .dark-section h2 {
-            color: var(--cherry-blossom);
-        }
-        
-        .dark-section h2::after {
-            background: linear-gradient(90deg, var(--cherry-blossom), var(--vintage-gold));
-        }
+
+        /* Add all your previous CSS styles here too */
+        /* [Include all the previous CSS from our last version] */
     </style>
 </head>
 <body>
+    <!-- Animal Print Overlays -->
+    <div class="animal-overlay home-animal"></div>
+    <div class="animal-overlay music-animal" style="display: none;"></div>
+    <div class="animal-overlay fashion-animal" style="display: none;"></div>
+    <div class="animal-overlay tech-animal" style="display: none;"></div>
+
     <!-- Navigation -->
     <nav>
         <a href="#" onclick="showPage('home')">Home</a>
@@ -375,117 +216,40 @@
             <h2>🎵 Singer-Songwriter & Sound Artist</h2>
             <div class="content-card">
                 <h3 style="color: var(--dark-plum); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Crafting Sonic Stories</h3>
-                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
-                    As a singer-songwriter, I pour my soul into every lyric and melody. Drawing from Neo Soul, Hip Hop, and R&B influences, 
-                    I create music that resonates with raw emotion and authentic storytelling. Beyond writing and performing, I've developed 
-                    skills in sound engineering - self-taught in minor mixing and mastering to ensure every track carries the exact emotional 
-                    weight I intend.
-                </p>
                 
-                <h4 style="color: var(--deep-burgundy); margin-bottom: 1.5rem; font-size: 1.4rem; font-family: 'Playfair Display', serif;">Stream My Music Worldwide</h4>
-                
-                <div class="streaming-links">
-                    <a href="https://open.spotify.com/artist/17buaEcBQPLnDa2oEXkXLH?si=JXfCSTtzQpmuUMKbYE9e1A" target="_blank">
-                        <i class="fab fa-spotify"></i> Spotify
-                    </a>
-                    <a href="https://music.apple.com/us/artist/xaviera/1713989611" target="_blank">
-                        <i class="fab fa-apple"></i> Apple Music
-                    </a>
-                    <a href="https://www.youtube.com/@XavieraWealthOfficial/videos" target="_blank">
-                        <i class="fab fa-youtube"></i> YouTube
-                    </a>
+                <!-- Audio Players -->
+                <div class="audio-player">
+                    <h4>Listen to My Music</h4>
+                    <audio controls>
+                        <source src="audio/song1.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                        <source src="audio/song2.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                        <source src="audio/song3.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
                 </div>
-                
-                <div style="margin-top: 3rem;">
-                    <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem; font-size: 1.4rem; font-family: 'Playfair Display', serif;">Live Performances</h4>
-                    <p style="font-style: italic; text-align: center; color: var(--dark-plum);">
-                        [Your performance photos will be displayed here - capturing the energy and connection of live shows]
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Podcast Page -->
-    <div id="podcast" class="page">
-        <div class="container">
-            <h2>🎙️ Threads & Thoughts</h2>
-            <div class="content-card">
-                <h3 style="color: var(--dark-plum); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Conversations That Matter</h3>
-                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
-                    Join me in intimate conversations exploring creativity, spirituality, and the journey of multi-passionate living. 
-                    Each episode is a space for authentic storytelling and meaningful connections.
-                </p>
-                
-                <div class="podcast-embed">
-                    <h4 style="color: var(--deep-burgundy); margin-bottom: 1.5rem; font-family: 'Playfair Display', serif;">Listen to the Latest Episode</h4>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/6PV2btPqyBV7kwuQUVZzmy/video?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-                
-                <div class="streaming-links">
-                    <a href="https://open.spotify.com/show/6PV2btPqyBV7kwuQUVZzmy?si=d96ed95a0741417f" target="_blank">
-                        <i class="fab fa-spotify"></i> Spotify Podcasts
-                    </a>
-                    <a href="https://podcasts.apple.com/za/podcast/threads-and-thoughts/id1811821903" target="_blank">
-                        <i class="fab fa-apple"></i> Apple Podcasts
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Tech Page -->
-    <div id="tech" class="page">
-        <div class="container">
-            <h2>💻 App Developer & Creative Technologist</h2>
-            <div class="content-card">
-                <h3 style="color: var(--dark-plum); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Building Digital Experiences</h3>
-                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
-                    As an App Developer specializing in coding and web design, I create digital solutions that blend functionality with beautiful user experiences. 
-                    My journey in technology has equipped me with the skills to bring creative visions to life through code.
-                </p>
-                
-                <h4 style="color: var(--deep-burgundy); margin-bottom: 1.5rem; font-size: 1.4rem; font-family: 'Playfair Display', serif;">Technical Expertise</h4>
-                
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <i class="fab fa-html5"></i>
-                        <p>HTML/CSS</p>
+                <!-- Performance Photos -->
+                <h4 style="color: var(--deep-burgundy); margin: 2rem 0 1rem; font-size: 1.4rem; font-family: 'Playfair Display', serif;">Live Performances</h4>
+                <div class="image-grid">
+                    <div class="music-image">
+                        <img src="images/music/IMG_0889.jpg" alt="Xaviera Performance">
                     </div>
-                    <div class="skill-card">
-                        <i class="fab fa-js"></i>
-                        <p>JavaScript</p>
+                    <div class="music-image">
+                        <img src="images/music/IMG_0890.jpg" alt="Xaviera On Stage">
                     </div>
-                    <div class="skill-card">
-                        <i class="fab fa-react"></i>
-                        <p>React</p>
+                    <div class="music-image">
+                        <img src="images/music/IMG_0891.jpg" alt="Xaviera Live Show">
                     </div>
-                    <div class="skill-card">
-                        <i class="fab fa-python"></i>
-                        <p>Python</p>
+                    <div class="music-image">
+                        <img src="images/music/performance.jpg" alt="Xaviera Concert">
                     </div>
                 </div>
-                
-                <h4 style="color: var(--deep-burgundy); margin-bottom: 1.5rem; font-size: 1.4rem; font-family: 'Playfair Display', serif; margin-top: 2rem;">Additional Professional Skills</h4>
-                
-                <div class="additional-skills">
-                    <div class="skill-item">
-                        <h5 style="color: var(--dark-plum); margin-bottom: 0.5rem;">Public Speaking</h5>
-                        <p>Engaging storytelling and presentation across diverse audiences</p>
-                    </div>
-                    <div class="skill-item">
-                        <h5 style="color: var(--dark-plum); margin-bottom: 0.5rem;">Language & Communication</h5>
-                        <p>TEFL certified with expertise in clear, effective communication</p>
-                    </div>
-                    <div class="skill-item">
-                        <h5 style="color: var(--dark-plum); margin-bottom: 0.5rem;">Audio Production</h5>
-                        <p>Transcription and sound engineering for polished audio content</p>
-                    </div>
-                </div>
-                
-                <p style="font-style: italic; text-align: center; margin-top: 2rem; color: var(--deep-burgundy); font-family: 'Crimson Text', serif;">
-                    "Technology is my canvas for solving problems and creating beautiful digital experiences"
-                </p>
             </div>
         </div>
     </div>
@@ -496,123 +260,42 @@
             <h2>👗 لا تخف - La Takhaf</h2>
             <div class="content-card">
                 <h3 style="color: var(--dark-plum); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">"Do Not Fear" - A Philosophy Woven in Fabric</h3>
-                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
-                    لا تخف - two words that carry the weight of courage, the whisper of resilience, the promise of authenticity. 
-                    La Takhaf is more than a fashion label; it is a movement born from the soul, where every stitch tells a story of fearlessness.
-                </p>
                 
-                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
-                    My designs emerge from the quiet spaces of the heart - intuitive creations that translate emotion into elegance, 
-                    transforming what I feel into what you wear. Each piece is a love letter to self-expression, a armor of beauty for the modern visionary.
-                </p>
-                
-                <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem; font-size: 1.4rem; font-family: 'Playfair Display', serif;">The Capsule Collection</h4>
-                <p style="font-style: italic; text-align: center; color: var(--dark-plum); margin-bottom: 2rem;">
-                    A curated expression of artistic vision - where fabric becomes poetry and design becomes dialogue
-                </p>
-                
-                <div style="padding: 2rem; background: var(--cherry-blossom); border-radius: 10px; text-align: center;">
-                    <p style="margin: 0; font-style: italic; color: var(--deep-burgundy); font-size: 1.1rem; font-family: 'Crimson Text', serif;">
-                        "Fashion is my canvas for storytelling and empowerment"
-                    </p>
+                <!-- Fashion Gallery -->
+                <h4 style="color: var(--deep-burgundy); margin: 2rem 0 1rem; font-size: 1.4rem; font-family: 'Playfair Display', serif;">Capsule Collection</h4>
+                <div class="image-grid">
+                    <div class="fashion-image">
+                        <img src="images/fashion/AFI-Prive-Ladies-Denim-Tassel-Set.webp" alt="AFI Prive Denim Tassel Set">
+                    </div>
+                    <div class="fashion-image">
+                        <img src="images/fashion/Nala-Prive-Crystal-Pants.webp" alt="Nala Prive Crystal Pants">
+                    </div>
+                    <div class="fashion-image">
+                        <img src="images/fashion/IMG_0411.jpg" alt="Fashion Design">
+                    </div>
+                    <div class="fashion-image">
+                        <img src="images/fashion/Sloane-Pleated-Fringe-Dress-Black.jpg" alt="Sloane Pleated Fringe Dress">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Writing Page -->
-    <div id="writing" class="page">
-        <div class="container">
-            <h2>📚 The Author's Desk</h2>
-            <div class="content-card">
-                <h3 style="color: var(--dark-plum); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Words Waiting to Breathe</h3>
-                <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.8;">
-                    Three completed manuscripts rest in the quiet space between creation and revelation - 
-                    each a different facet of the human experience, each a piece of my soul given form through words.
-                </p>
-                
-                <div class="book-grid">
-                    <div class="book-card">
-                        <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Inspirational Wisdom</h4>
-                        <p style="font-style: italic;">A collection of insights and quotes gathered from life's classroom</p>
-                    </div>
-                    <div class="book-card">
-                        <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Spiritual Journey</h4>
-                        <p style="font-style: italic;">The path within - exploring consciousness and divine connection</p>
-                    </div>
-                    <div class="book-card">
-                        <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Life at 30</h4>
-                        <p style="font-style: italic;">A raw and beautiful memoir of three decades of becoming</p>
-                    </div>
-                </div>
-                
-                <div style="text-align: center; margin-top: 3rem;">
-                    <p style="font-style: italic; color: var(--deep-burgundy); font-size: 1.1rem; font-family: 'Crimson Text', serif;">
-                        "Some stories are meant to be shared when the world is ready to hear them"
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact Page -->
-    <div id="contact" class="page">
-        <div class="container">
-            <h2>Connect With Me</h2>
-            <div class="content-card">
-                <h3 style="color: var(--dark-plum); margin-bottom: 1.5rem; font-size: 2rem; font-family: 'Crimson Text', serif;">Let's Create Magic Together</h3>
-                <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.8; text-align: center;">
-                    Ready to collaborate on a project? Want to discuss music, fashion, technology, or storytelling? 
-                    Let's create something extraordinary together.
-                </p>
-                
-                <div class="social-links">
-                    <a href="https://instagram.com/XavieraWealth" target="_blank" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://twitter.com/XavieraWealth" target="_blank" title="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://tiktok.com/@xavierawealth_official" target="_blank" title="TikTok">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                    <a href="#" target="_blank" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://open.spotify.com/artist/17buaEcBQPLnDa2oEXkXLH?si=JXfCSTtzQpmuUMKbYE9e1A" target="_blank" title="Spotify">
-                        <i class="fab fa-spotify"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@XavieraWealthOfficial/videos" target="_blank" title="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-                
-                <div style="text-align: center; margin-top: 2rem; padding: 2rem; background: var(--cherry-blossom); border-radius: 10px;">
-                    <h4 style="color: var(--deep-burgundy); margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Get In Touch</h4>
-                    <p style="font-size: 1.2rem; color: var(--dark-plum); margin-bottom: 0.5rem;">
-                        <i class="fas fa-envelope"></i> executive.xavierawealth@outlook.com
-                    </p>
-                    <p style="font-size: 1.1rem; color: var(--deep-burgundy);">
-                        <i class="fas fa-podcast"></i> Podcast: threadsxthoughts.fm
-                    </p>
-                </div>
-                
-                <div class="cheris-callout" style="margin: 2rem auto 0; display: inline-block;">
-                    For Ma Cheris - my loves, my eternal inspiration
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- [Keep all your other pages exactly as they were] -->
 
     <script>
         function showPage(pageId) {
-            // Hide all pages
+            // Hide all pages and animal overlays
             document.querySelectorAll('.page').forEach(page => {
                 page.classList.remove('active');
             });
+            document.querySelectorAll('.animal-overlay').forEach(overlay => {
+                overlay.style.display = 'none';
+            });
             
-            // Show selected page
+            // Show selected page and corresponding animal overlay
             document.getElementById(pageId).classList.add('active');
+            document.querySelector(`.${pageId}-animal`).style.display = 'block';
             
             // Scroll to top
             window.scrollTo(0, 0);
