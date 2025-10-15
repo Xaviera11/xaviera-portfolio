@@ -11,7 +11,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            cursor: default;
         }
         
         :root {
@@ -31,7 +30,7 @@
             scroll-behavior: smooth;
         }
 
-        /* Gold Leopard Print Background */
+        /* Gold Leopard Print Background - FIXED */
         body::before {
             content: '';
             position: fixed;
@@ -46,7 +45,7 @@
                 radial-gradient(circle at 80% 20%, var(--vintage-gold) 3px, transparent 4px),
                 radial-gradient(circle at 30% 80%, var(--vintage-gold) 2px, transparent 3px);
             background-size: 150px 150px, 200px 200px, 180px 180px, 220px 220px, 160px 160px;
-            opacity: 0.08;
+            opacity: 0.1;
             pointer-events: none;
             z-index: -1;
         }
@@ -87,6 +86,7 @@
             padding: 100px 20px 50px;
             min-height: 100vh;
             animation: fadeIn 0.8s ease;
+            position: relative;
         }
         
         .active {
@@ -162,7 +162,7 @@
             margin-bottom: 2rem;
         }
 
-        /* Image Grids */
+        /* Image Grids - FIXED CROPPING */
         .image-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -184,8 +184,10 @@
 
         .fashion-image img, .music-image img {
             width: 100%;
-            height: 300px;
-            object-fit: cover;
+            height: 400px;
+            object-fit: contain;
+            object-position: center top;
+            background: var(--cherry-blossom);
         }
 
         /* Audio Player */
@@ -378,20 +380,23 @@
                     </audio>
                 </div>
 
-                <!-- Performance Photos -->
+                <!-- Performance Photos - UPDATED WITH NEW IMAGES -->
                 <h4 style="color: var(--deep-burgundy); margin: 2rem 0 1rem; font-size: 1.4rem; font-family: 'Playfair Display', serif;">Live Performances</h4>
                 <div class="image-grid">
                     <div class="music-image">
-                        <img src="images/audio/IMG_0889.jpg" alt="Live Performance">
+                        <img src="images/audio/IMG_0889.jpg" alt="Xaviera Live Performance">
                     </div>
                     <div class="music-image">
-                        <img src="images/audio/IMG_0890.jpg" alt="Stage Performance">
+                        <img src="images/audio/IMG_0890.jpg" alt="Xaviera Stage Performance">
                     </div>
                     <div class="music-image">
-                        <img src="images/audio/IMG_0891.jpg" alt="Concert Performance">
+                        <img src="images/audio/IMG_0891.jpg" alt="Xaviera Concert Performance">
                     </div>
                     <div class="music-image">
-                        <img src="images/audio/performance.jpg" alt="Musical Showcase">
+                        <img src="images/audio/IMG_1219.jpg" alt="Xaviera Musical Showcase">
+                    </div>
+                    <div class="music-image">
+                        <img src="images/audio/IMG_1221.jpg" alt="Xaviera Live Performance">
                     </div>
                 </div>
             </div>
