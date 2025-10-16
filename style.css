@@ -21,7 +21,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* VISIBLE LEOPARD PRINT BACKGROUND */
+/* ELEGANT LEOPARD PRINT */
 body::before {
     content: '';
     position: fixed;
@@ -30,18 +30,17 @@ body::before {
     width: 100%;
     height: 100%;
     background-image: 
-        radial-gradient(circle at 25% 25%, var(--vintage-gold) 25px, transparent 30px),
-        radial-gradient(circle at 75% 75%, var(--vintage-gold) 30px, transparent 35px),
-        radial-gradient(circle at 50% 10%, var(--vintage-gold) 20px, transparent 25px),
-        radial-gradient(circle at 10% 50%, var(--vintage-gold) 28px, transparent 33px),
-        radial-gradient(circle at 90% 30%, var(--vintage-gold) 22px, transparent 27px),
-        radial-gradient(circle at 30% 80%, var(--vintage-gold) 26px, transparent 31px),
-        radial-gradient(circle at 70% 15%, var(--vintage-gold) 24px, transparent 29px),
-        radial-gradient(circle at 15% 70%, var(--vintage-gold) 27px, transparent 32px);
-    background-size: 200px 200px;
-    opacity: 0.2;
+        radial-gradient(circle at 15% 25%, var(--vintage-gold) 0px, transparent 50px),
+        radial-gradient(circle at 85% 75%, var(--vintage-gold) 0px, transparent 55px),
+        radial-gradient(circle at 45% 10%, var(--vintage-gold) 0px, transparent 45px),
+        radial-gradient(circle at 10% 60%, var(--vintage-gold) 0px, transparent 52px),
+        radial-gradient(circle at 90% 35%, var(--vintage-gold) 0px, transparent 48px),
+        radial-gradient(circle at 35% 85%, var(--vintage-gold) 0px, transparent 54px);
+    background-size: 400px 400px;
+    opacity: 0.06;
     pointer-events: none;
     z-index: -1;
+    filter: blur(0.5px);
 }
 
 /* Navigation */
@@ -265,33 +264,36 @@ audio {
 /* Skills Grid */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     margin: 2rem 0;
 }
 
-.skill-card {
+.skill-category {
     background: var(--cherry-blossom);
-    padding: 2rem 1rem;
+    padding: 2rem;
     border-radius: 10px;
-    text-align: center;
-    transition: all 0.3s ease;
+    border-left: 4px solid var(--vintage-gold);
 }
 
-.skill-card:hover {
-    background: var(--dark-cherry);
-    color: white;
-    transform: translateY(-5px);
-}
-
-.skill-card i {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.skill-category h4 {
     color: var(--dark-cherry);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
 }
 
-.skill-card:hover i {
-    color: var(--vintage-gold);
+.skill-list {
+    list-style: none;
+}
+
+.skill-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(61, 5, 25, 0.1);
+    font-size: 1rem;
+}
+
+.skill-list li:last-child {
+    border-bottom: none;
 }
 
 /* Quote Box */
