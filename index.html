@@ -262,7 +262,7 @@
         </div>
     </div>
 
-    <!-- Writing Page - FIXED WITH WORKING IMAGE PATH -->
+    <!-- Writing Page - FIXED WITH DEBUG -->
     <div id="writing" class="page">
         <div class="container">
             <h2>📚 The Written Word</h2>
@@ -270,11 +270,13 @@
                 <h3>A Lifelong Love Affair with Words</h3>
                 <p>From childhood spent immersed in books to finding my own voice through writing, words have always been my sanctuary. This lifelong passion has evolved into crafting narratives that explore the human experience in all its complexity.</p>
                 
-                <!-- Book Section - GUARANTEED TO WORK -->
+                <!-- Book Section - FIXED PATH WITH DEBUG -->
                 <div class="book-showcase">
                     <div class="book-cover">
-                        <!-- REPLACE YOUR-GITHUB-USERNAME with your actual GitHub username -->
-                        <img src="https://raw.githubusercontent.com/YOUR-GITHUB-USERNAME/xaviera-portfolio/main/images/writing/cover.jpg" alt="Book Cover: From Roots to Radiance">
+                        <!-- THIS IS THE FIXED LINE - Using same path format as other images -->
+                        <img src="images/writing/cover.jpg" alt="Book Cover: From Roots to Radiance" 
+                             id="bookCoverImage"
+                             style="border: 3px solid #ff0000; background: #f8f8f8;">
                         
                         <a href="https://www.amazon.in/Roots-Radiance-Inspiring-Words-Strength-ebook/dp/B0G3T3PGCW" target="_blank" class="buy-button">
                             <i class="fab fa-amazon"></i> Buy on Amazon
@@ -364,6 +366,37 @@
         // Set home as default page
         document.addEventListener('DOMContentLoaded', function() {
             showPage('home');
+            
+            // DEBUG: Check book cover image
+            const bookImg = document.getElementById('bookCoverImage');
+            if (bookImg) {
+                console.log('📚 Book cover path:', bookImg.src);
+                
+                bookImg.onload = function() {
+                    console.log('✅ Book cover loaded successfully');
+                    this.style.border = '3px solid #00ff00'; // Green border if loaded
+                };
+                
+                bookImg.onerror = function() {
+                    console.error('❌ Book cover FAILED to load');
+                    console.log('Trying to load from:', this.src);
+                    this.style.border = '3px solid #ff0000'; // Red border if failed
+                    this.style.background = '#ffe6e6';
+                    this.alt = 'IMAGE NOT FOUND: ' + this.src;
+                    
+                    // Test the URL
+                    fetch(this.src)
+                        .then(response => {
+                            console.log('HTTP Status:', response.status, response.statusText);
+                            if (response.status === 404) {
+                                console.error('FILE NOT FOUND. Check if image exists at:', this.src);
+                            }
+                        })
+                        .catch(err => {
+                            console.error('Network error:', err);
+                        });
+                };
+            }
         });
     </script>
 </body>
