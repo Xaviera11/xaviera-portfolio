@@ -370,3 +370,190 @@ audio {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+/* ===== NEW CSS FOR UPDATED MUSIC SECTION ===== */
+
+/* Manager Bio Section */
+.manager-bio {
+    background: linear-gradient(135deg, var(--cherry-blossom), #f5e9e6);
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    border-left: 5px solid var(--vintage-gold);
+    text-align: center;
+}
+
+.manager-bio h3 {
+    color: var(--dark-cherry);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.manager-bio p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--deep-burgundy);
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Bio Highlights Grid */
+.bio-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.bio-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.bio-item:hover {
+    transform: translateY(-5px);
+}
+
+.bio-item i {
+    font-size: 2rem;
+    color: var(--vintage-gold);
+    margin-bottom: 0.8rem;
+}
+
+.bio-item p {
+    font-weight: 600;
+    color: var(--dark-cherry);
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Audio Gallery */
+.audio-gallery {
+    margin: 3rem 0;
+}
+
+.audio-track {
+    background: var(--cherry-blossom);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-left: 4px solid var(--vintage-gold);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.audio-track:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(61, 5, 25, 0.1);
+}
+
+.track-info {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.track-title {
+    color: var(--dark-cherry);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Crimson Text', serif;
+}
+
+.track-description {
+    color: var(--deep-burgundy);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.audio-gallery audio {
+    width: 100%;
+    max-width: 600px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+/* Performance Credits */
+.performance-credit {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(61, 5, 25, 0.85);
+    color: var(--cherry-blossom);
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Performance Summary Box */
+.performance-summary {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    background: rgba(201, 169, 106, 0.08);
+    border-radius: 10px;
+    border: 1px solid rgba(201, 169, 106, 0.2);
+}
+
+.performance-summary h4 {
+    color: var(--dark-cherry);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.performance-summary p {
+    color: var(--deep-burgundy);
+    line-height: 1.8;
+}
+
+/* Audio file type handling note */
+.audio-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--vintage-gold);
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Responsive adjustments for audio gallery */
+@media (max-width: 768px) {
+    .audio-track {
+        padding: 1.2rem;
+    }
+    
+    .track-title {
+        font-size: 1.2rem;
+    }
+    
+    .track-description {
+        font-size: 0.95rem;
+    }
+    
+    .bio-highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .bio-item {
+        padding: 1rem;
+    }
+    
+    .performance-credit {
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
+}
