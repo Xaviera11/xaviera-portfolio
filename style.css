@@ -501,4 +501,18 @@ audio {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.audio
+.audio-track:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(61, 5, 25, 0.1);
+}
+
+.track-info {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.track-title {
+    color: var(--dark-cherry);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem
