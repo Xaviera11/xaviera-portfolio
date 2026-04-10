@@ -598,3 +598,81 @@ audio {
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(61, 5, 25, 0.1);
     transition: transform 0.3s ease;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+}
+
+.video-item video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background: #000;
+}
+
+/* Author website link button */
+.author-website-link {
+    display: inline-block;
+    background-color: rgba(201, 169, 106, 0.15);
+    color: var(--vintage-gold);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(201, 169, 106, 0.3);
+}
+
+.author-website-link:hover {
+    background-color: var(--vintage-gold);
+    color: var(--deep-burgundy);
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    nav a {
+        margin: 0 1rem;
+        font-size: 1rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    .audio-track {
+        padding: 1.2rem;
+    }
+    
+    .track-title {
+        font-size: 1.2rem;
+    }
+    
+    .track-description {
+        font-size: 0.95rem;
+    }
+    
+    .book-showcase {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .book-cover img {
+        height: 280px;
+    }
+    
+    .video-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .video-item video {
+        height: 250px;
+    }
+}
