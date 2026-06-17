@@ -254,18 +254,30 @@
         </div>
     </div>
 
-    <!-- EVENTS PAGE (NEW) -->
+    <!-- ===== EVENTS PAGE (UPDATED - WORKS WITH OR WITHOUT IMAGES) ===== -->
     <div id="events" class="page">
         <div class="container">
             <h2>🎬 Wealth Creative Entertainment</h2>
             <div class="content-card">
                 <div class="events-grid">
                     <div class="event-card">
-                        <img src="images/wealthcreativeentertainment.jpg" alt="Wealth Creative Entertainment" class="event-banner" />
+                        <!-- BANNER IMAGE - if missing, placeholder shows instead -->
+                        <img src="images/wealthcreativeentertainment.jpg" 
+                             alt="Wealth Creative Entertainment" 
+                             class="event-banner"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <div class="banner-placeholder" style="display:none; background: var(--vintage-gold); height: 180px; align-items: center; justify-content: center; color: var(--deep-burgundy); font-weight: bold; font-size: 1.3rem; border-radius: 10px 10px 0 0;">
+                            🎬 Wealth Creative Entertainment
+                        </div>
                         <h3>High On Art</h3>
                         <p>An exclusive lifestyle experience where art, culture, music, and nature come together. Presented by Wealth Creative Entertainment.</p>
                         <div class="event-logo">
-                            <img src="images/highonart.png" alt="High On Art" />
+                            <img src="images/highonart.png" 
+                                 alt="High On Art" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                            <div class="logo-placeholder" style="display:none; background: var(--cherry-blossom); padding: 0.8rem; border-radius: 8px; text-align: center; font-weight: bold; color: var(--dark-cherry); font-size: 1rem;">
+                                🎨 HIGH ON ART
+                            </div>
                         </div>
                         <a href="https://www.webtickets.co.za/v2/event.aspx?itemid=1597399429" target="_blank" class="event-button">Get Tickets</a>
                     </div>
