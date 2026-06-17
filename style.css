@@ -759,3 +759,20 @@ h2::after {
         font-size: 2rem;
     }
 }
+/* Landscape poster styling */
+.event-banner-landscape {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--vintage-gold);
+}
+
+/* Ensure event card text is centered */
+.event-card h3 {
+    text-align: center;
+}
+
+.event-card p {
+    text-align: center;
+}
