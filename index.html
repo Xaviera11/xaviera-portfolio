@@ -255,23 +255,36 @@
     </div>
 
     <!-- ===== EVENTS PAGE (UPDATED - WORKS WITH OR WITHOUT IMAGES) ===== -->
+       <!-- ===== EVENTS PAGE (UPDATED - with landscape poster + centered text) ===== -->
     <div id="events" class="page">
         <div class="container">
             <h2>🎬 Wealth Creative Entertainment</h2>
             <div class="content-card">
                 <div class="events-grid">
                     <div class="event-card">
-                        <!-- BANNER IMAGE - if missing, placeholder shows instead -->
+                        <!-- LANDSCAPE POSTER (NEW - displayed first) -->
+                        <img src="images/highonartlandscape.jpeg" 
+                             alt="High On Art - Landscape Poster" 
+                             class="event-banner event-banner-landscape"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <div class="banner-placeholder" style="display:none; background: var(--vintage-gold); height: 200px; align-items: center; justify-content: center; color: var(--deep-burgundy); font-weight: bold; font-size: 1.3rem; border-radius: 10px 10px 0 0;">
+                            🎨 High On Art - Landscape
+                        </div>
+
+                        <!-- ORIGINAL BANNER IMAGE (now secondary) -->
                         <img src="images/wealthcreativeentertainment.jpg" 
                              alt="Wealth Creative Entertainment" 
                              class="event-banner"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                        <div class="banner-placeholder" style="display:none; background: var(--vintage-gold); height: 180px; align-items: center; justify-content: center; color: var(--deep-burgundy); font-weight: bold; font-size: 1.3rem; border-radius: 10px 10px 0 0;">
-                            🎬 Wealth Creative Entertainment
-                        </div>
-                        <h3>High On Art</h3>
-                        <p>An exclusive lifestyle experience where art, culture, music, and nature come together. Presented by Wealth Creative Entertainment.</p>
-                        <div class="event-logo">
+                             onerror="this.style.display='none';" />
+
+                        <!-- CENTERED TITLE -->
+                        <h3 style="text-align: center;">High On Art</h3>
+
+                        <!-- CENTERED DESCRIPTION -->
+                        <p style="text-align: center;">An exclusive lifestyle experience where art, culture, music, and nature come together. Presented by Wealth Creative Entertainment.</p>
+
+                        <!-- LOGO (smaller) -->
+                        <div class="event-logo" style="text-align: center;">
                             <img src="images/highonart.png" 
                                  alt="High On Art" 
                                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
@@ -279,13 +292,16 @@
                                 🎨 HIGH ON ART
                             </div>
                         </div>
-                        <a href="https://www.webtickets.co.za/v2/event.aspx?itemid=1597399429" target="_blank" class="event-button">Get Tickets</a>
+
+                        <!-- TICKET BUTTON (centered) -->
+                        <div style="text-align: center; margin-top: 1rem;">
+                            <a href="https://www.webtickets.co.za/v2/event.aspx?itemid=1597399429" target="_blank" class="event-button">Get Tickets</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- CONTACT PAGE -->
     <div id="contact" class="page">
         <div class="container">
