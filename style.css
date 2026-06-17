@@ -1,18 +1,15 @@
-/* ===== NEW: Wealth Creative Entertainment & Events ===== */
-
+/* Wealth Creative Entertainment & Events */
 .events-section {
     padding: 60px 20px;
     background: var(--cream);
     text-align: center;
 }
-
 .events-section h2 {
     font-size: 2.5rem;
     color: var(--dark-cherry);
     margin-bottom: 2rem;
     font-family: 'Playfair Display', serif;
 }
-
 .events-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -20,7 +17,6 @@
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .event-card {
     background: white;
     border-radius: 16px;
@@ -29,43 +25,36 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding-bottom: 1.5rem;
 }
-
 .event-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 40px rgba(61, 5, 25, 0.15);
 }
-
 .event-card .event-banner {
     width: 100%;
     height: auto;
     display: block;
     border-bottom: 3px solid var(--vintage-gold);
 }
-
 .event-card h3 {
     font-size: 1.6rem;
     color: var(--dark-cherry);
     margin: 1rem 0 0.5rem;
     font-family: 'Playfair Display', serif;
 }
-
 .event-card p {
     padding: 0 1.2rem;
     color: var(--charcoal);
     font-size: 0.95rem;
     line-height: 1.6;
 }
-
 .event-logo {
     margin: 1rem auto 0;
     max-width: 120px;
 }
-
 .event-logo img {
     width: 100%;
     height: auto;
 }
-
 .event-button {
     display: inline-block;
     margin: 0.75rem auto 0;
@@ -77,13 +66,10 @@
     font-weight: 600;
     transition: background 0.3s ease, transform 0.2s ease;
 }
-
 .event-button:hover {
     background: #b8964a;
     transform: scale(1.02);
 }
-
-/* WCE Badge on Home */
 .wce-badge {
     font-size: 0.95rem;
     color: var(--vintage-gold);
@@ -95,15 +81,11 @@
     display: inline-block;
     backdrop-filter: blur(4px);
 }
-
-/* Ensure hero container is flex/column to center badge */
 .hero .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-/* Responsive */
 @media (max-width: 768px) {
     .events-grid {
         grid-template-columns: 1fr;
