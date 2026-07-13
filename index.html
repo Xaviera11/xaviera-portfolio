@@ -3,336 +3,153 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xaviera – Creative Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500&family=Parisienne&display=swap" rel="stylesheet" />
+    <title>Aurelius – Name & Destiny Oracle</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+    <!-- Load Name Database First -->
+    <script src="names.js"></script>
+    <!-- Then Main Script -->
+    <script src="script.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <a href="#" onclick="showPage('home')">Home</a>
-        <a href="#" onclick="showPage('music')">Music</a>
-        <a href="#" onclick="showPage('podcast')">Podcast</a>
-        <a href="#" onclick="showPage('skills')">Skills</a>
-        <a href="#" onclick="showPage('fashion')">Fashion</a>
-        <a href="#" onclick="showPage('writing')">Writing</a>
-        <a href="#" onclick="showPage('events')">Events</a>
-        <a href="#" onclick="showPage('contact')">Connect</a>
-    </nav>
-
-    <!-- HOME PAGE -->
-    <div id="home" class="page active">
-        <section class="hero">
-            <div class="container">
-                <h1>Xaviera</h1>
-                <p>Artist • Developer • Visionary • Storyteller</p>
-                <p class="tagline">Where technology meets soulful creativity across every medium</p>
-                <p class="wce-badge">🎬 Presented by <strong>Wealth Creative Entertainment</strong></p>
-                <div class="cheris-callout">
-                    To Ma Cheris – my loves, my eternal inspiration
-                </div>
-            </div>
-        </section>
+    <!-- ===== PORTAL BACKGROUND (hidden initially) ===== -->
+    <div id="portalBg" class="portal-bg">
+        <div class="portal-ring"></div>
+        <div class="portal-ring"></div>
+        <div class="portal-ring"></div>
+        <div class="portal-ring"></div>
+        <div class="portal-ring"></div>
+        <div class="portal-spiral"></div>
+        <div class="portal-core"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
     </div>
 
-    <!-- MUSIC PAGE -->
-    <div id="music" class="page">
-        <div class="container">
-            <h2>🎵 Sonic Artistry & Production</h2>
-            <div class="content-card">
-                <h3>Crafting Sonic Stories</h3>
-                <div class="manager-bio">
-                    <h3>🎤 The Xaviera Sound</h3>
-                    <p>A genre-fluid artist blending Neo-Soul, Hip-Hop, and R&B with raw storytelling. Each song is a chapter of resilience, spirituality, and self-discovery—music that doesn't just sound good, it feels true.</p>
-                </div>
-
-                <div class="audio-gallery">
-                    <!-- Barakah -->
-                    <div class="audio-track">
-                        <div class="track-info">
-                            <div class="track-title">"Barakah"</div>
-                            <div class="track-description">Divine blessings made audible—a reminder to recognize how covered you are, giving gratitude for every hidden mercy</div>
-                        </div>
-                        <audio controls>
-                            <source src="audio/Baraka_Mar_3_2025_1223.mp3" type="audio/mpeg" />
-                        </audio>
-                    </div>
-                    <!-- Yusuf -->
-                    <div class="audio-track">
-                        <div class="track-info">
-                            <div class="track-title">"Yusuf"</div>
-                            <div class="track-description">Personal betrayal echoing Prophet Yusuf's story—when loved ones become the pit you're left in, and survival becomes your testimony</div>
-                        </div>
-                        <audio controls>
-                            <source src="audio/Yusuf_Jan_9_2025_2025.m4a" type="audio/mp4" />
-                        </audio>
-                    </div>
-                    <!-- Placid -->
-                    <div class="audio-track">
-                        <div class="track-info">
-                            <div class="track-title">"Placid" ft. Jxt Clement</div>
-                            <div class="track-description">Amapiano roots meet defiant truth: "You couldn't even be me if you wanted to"</div>
-                        </div>
-                        <audio controls>
-                            <source src="audio/Xaviera - PLACID (Official Music Video) (Lyric Video) ft. Jxt Clement - XavieraVEVO (youtube)-2.mp3" type="audio/mpeg" />
-                        </audio>
-                    </div>
-                    <!-- Takotsubo -->
-                    <div class="audio-track">
-                        <div class="track-info">
-                            <div class="track-title">"Takotsubo"</div>
-                            <div class="track-description">Exploring broken heart syndrome—the Japanese word for emotional collapse and the strength found in rebuilding alone</div>
-                        </div>
-                        <audio controls>
-                            <source src="audio/Xaviera - Takotsubo - XavieraVEVO (youtube)-2.mp3" type="audio/mpeg" />
-                        </audio>
-                    </div>
-                    <!-- Alhamdulillah -->
-                    <div class="audio-track">
-                        <div class="track-info">
-                            <div class="track-title">"Alhamdulillah"</div>
-                            <div class="track-description">A gratitude anthem inspired by the Arabic term "Alhamdulillah" which means "Thanks to God"</div>
-                        </div>
-                        <audio controls>
-                            <source src="audio/Alhamdulillah.mp3" type="audio/mpeg" />
-                        </audio>
-                    </div>
-                    <!-- You & I (Intro) -->
-                    <div class="audio-track">
-                        <div class="track-info">
-                            <div class="track-title">"You & I (Intro)" – Featured Artist</div>
-                            <div class="track-description">Special feature collaboration track – a soulful introduction to musical connection and shared artistry</div>
-                        </div>
-                        <audio controls>
-                            <source src="audio/You & I (Intro).mp3" type="audio/mpeg" />
-                        </audio>
-                    </div>
-                </div>
-
-                <h4>🎥 Live Performance Videos</h4>
-                <div class="video-gallery">
-                    <div class="video-item"><video controls><source src="audio/WhatsApp Video 2026-03-07 at 02.42.03.mp4" type="video/mp4" /></video></div>
-                    <div class="video-item"><video controls><source src="audio/WhatsApp Video 2026-03-07 at 02.42.08.mp4" type="video/mp4" /></video></div>
-                    <div class="video-item"><video controls><source src="audio/ssstik.io_@xavierawealth_official_1773645342245.mp4" type="video/mp4" /></video></div>
-                    <div class="video-item"><video controls><source src="audio/snaptik_7516280487107742983_v2.mp4" type="video/mp4" /></video></div>
-                    <div class="video-item"><video controls><source src="audio/ssstik.io_@xavierawealth_official_1773743791812.mp4" type="video/mp4" /></video></div>
-                </div>
-
-                <h4>🎤 Live Performances</h4>
-                <p style="text-align: center; color: var(--deep-burgundy); margin-bottom: 2rem;">Featured performer at fashion weeks in Johannesburg and Cape Town</p>
-                <div class="image-grid">
-                    <div class="music-image"><img src="images/audio/IMG_0889.jpg" alt="Xaviera performing live" /></div>
-                    <div class="music-image"><img src="images/audio/IMG_0890.jpg" alt="Xaviera on stage" /></div>
-                    <div class="music-image"><img src="images/audio/IMG_0891.jpg" alt="Xaviera performing at event" /></div>
-                    <div class="music-image"><img src="images/audio/IMG_1219.jpg" alt="Xaviera stage performance" /></div>
-                    <div class="music-image"><img src="images/audio/IMG_1221.jpg" alt="Xaviera live show" /></div>
-                </div>
-
-                <div class="performance-summary">
-                    <h4>Featured Performances Include:</h4>
-                    <p>
-                        • <strong>Cape Town Fashion Week</strong> – Performer<br />
-                        • <strong>Johannesburg Fashion Week</strong> – Performer<br />
-                        • <strong>GEWAL with Motsepe Foundation</strong> – Philanthropic showcase and featured interview<br />
-                        • <strong>Placid</strong> was used on SABC 2 as the soundtrack for Father's Day
-                    </p>
-                </div>
+    <div class="container" id="mainContainer">
+        <header>
+            <div class="logo">
+                <h1>AURELIUS</h1>
+                <div class="panther-mark"></div>
             </div>
-        </div>
-    </div>
+            <p class="tagline">Unlock the meaning, origin &amp; destiny of your name</p>
+        </header>
 
-    <!-- PODCAST PAGE -->
-    <div id="podcast" class="page">
-        <div class="container">
-            <h2>🎙️ Threads & Thoughts</h2>
-            <div class="content-card">
-                <h3>Conversations That Matter</h3>
-                <p>Join me in intimate conversations exploring creativity, spirituality, and the journey of multi-passionate living.</p>
-                <div class="podcast-embed">
-                    <h4>Listen to the Latest Episode</h4>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/6PV2btPqyBV7kwuQUVZzmy/video?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
+        <main>
+            <!-- ===== NAME ORACLE SECTION ===== -->
+            <div class="hero-section">
+                <div class="search-container" id="searchContainer">
+                    <h2>What's Your True Name?</h2>
+                    <div class="search-box">
+                        <input type="text" id="fullName" placeholder="Enter your full name..." />
 
-    <!-- SKILLS PAGE -->
-    <div id="skills" class="page">
-        <div class="container">
-            <h2>💎 Skills & Expertise</h2>
-            <div class="content-card">
-                <h3>Professional Certifications & Abilities</h3>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>🎓 Professional Certifications</h4>
-                        <ul class="skill-list">
-                            <li>National Certificate in Systems Development</li>
-                            <li>TEFL Certification (Teaching English)</li>
-                            <li>Transcription Certification</li>
-                            <li>Voice Over Artistry Training</li>
-                        </ul>
+                        <div class="gender-select">
+                            <label>
+                                <input type="radio" name="gender" value="female" checked />
+                                Female
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="male" />
+                                Male
+                            </label>
+                        </div>
+
+                        <div class="birthdate">
+                            <input type="date" id="birthDate" />
+                            <small>Optional – Life Path Number &amp; Star Sign</small>
+                        </div>
+
+                        <button onclick="revealPath()">Reveal Your Path</button>
                     </div>
-                    <div class="skill-category">
-                        <h4>💻 Technical Skills</h4>
-                        <ul class="skill-list">
-                            <li>Web Development (HTML, CSS, JavaScript)</li>
-                            <li>UI/UX Design</li>
-                            <li>App Development</li>
-                            <li>Responsive Web Design</li>
-                            <li>Portfolio Website Development</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>🎤 Creative & Communication</h4>
-                        <ul class="skill-list">
-                            <li>Voice Over & Audio Production</li>
-                            <li>Content Writing & Transcription</li>
-                            <li>Multilingual Communication</li>
-                            <li>Creative Direction</li>
-                            <li>Public Speaking & Presentation</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="quote-box">
-                    <p>"Versatility is my strength – blending technical precision with creative expression across multiple disciplines."</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- FASHION PAGE -->
-    <div id="fashion" class="page">
-        <div class="container">
-            <h2>👗 لا تخف – La Takhaf</h2>
-            <div class="content-card">
-                <h3>"Do Not Fear" – A Philosophy Woven in Fabric</h3>
-                <h4>Capsule Collection – Previous Company Collaboration</h4>
-                <div class="image-grid">
-                    <div class="fashion-image"><img src="images/fashion/Ladies-Denim-Tassel-.jpg" alt="Denim Tassel Collection" /></div>
-                    <div class="fashion-image"><img src="images/fashion/Nala-Prive-Crystal-Pants.jpg" alt="Crystal Embellished Design" /></div>
-                    <div class="fashion-image"><img src="images/fashion/Sloane-Pleated-Fringe-Dress-Black.jpg" alt="Pleated Fringe Design" /></div>
-                    <div class="fashion-image"><img src="images/fashion/IMG_0411.jpg" alt="Fashion Design Concept" /></div>
-                    <div class="fashion-image"><img src="images/fashion/IMG_8590.JPEG" alt="Fashion Design Showcase" /></div>
-                    <div class="fashion-image"><img src="images/fashion/IMG_8591.PNG" alt="Fashion Collection Preview" /></div>
-                    <div class="fashion-image"><img src="images/fashion/IMG_8992.JPEG" alt="Fashion Design Collection" /></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- WRITING PAGE -->
-    <div id="writing" class="page">
-        <div class="container">
-            <h2>📚 The Written Word</h2>
-            <div class="content-card">
-                <h3>A Lifelong Love Affair with Words</h3>
-                <p>From childhood spent immersed in books to finding my own voice through writing, words have always been my sanctuary.</p>
-                <div class="book-showcase">
-                    <div class="book-cover">
-                        <img src="images/audio/cover.jpg" alt="Book Cover: From Roots to Radiance" />
-                        <a href="https://www.amazon.in/Roots-Radiance-Inspiring-Words-Strength-ebook/dp/B0G3T3PGCW" target="_blank" class="buy-button"><i class="fab fa-amazon"></i> Buy on Amazon</a>
-                        <p style="text-align:center; margin-top:1rem;">
-                            <a href="https://3779753300.author-pages.com/" target="_blank" class="author-website-link">🌻 Visit the Official Author Website</a>
+                    <div id="result" class="result-box">
+                        <p class="placeholder">
+                            Your divine reading will appear here.
                         </p>
                     </div>
-                    <div class="book-details">
-                        <h4>From Roots to Radiance: Inspiring Words of Strength</h4>
-                        <p class="book-description"><strong>Find Your Strength. Embrace Your Light.</strong> In every life, there are moments that bury us, and moments that help us break through.</p>
-                        <div class="book-features">
-                            <div class="feature"><i class="fas fa-lightbulb"></i><span>Inspirational Guidance</span></div>
-                            <div class="feature"><i class="fas fa-heart"></i><span>Spiritual Wisdom</span></div>
-                            <div class="feature"><i class="fas fa-book-open"></i><span>Personal Growth</span></div>
-                        </div>
-                        <a href="https://www.amazon.in/Roots-Radiance-Inspiring-Words-Strength-ebook/dp/B0G3T3PGCW" target="_blank" class="amazon-link"><i class="fab fa-amazon"></i> Available on Amazon Kindle</a>
-                    </div>
-                </div>
-                <div class="quote-box">
-                    <p>"Some stories choose their time to be told, and I am merely their keeper until then."</p>
                 </div>
             </div>
-        </div>
+
+            <!-- ===== EVENTS SECTION – HIGH ON ART VIDEO ===== -->
+            <section class="events-section">
+                <div class="events-header">
+                    <h2>✦ HIGH ON ART EVENTS ✦</h2>
+                    <p>Experience the fusion of art, music, and divine energy</p>
+                </div>
+
+                <div class="video-container">
+                    <!-- 
+                        ============================================
+                        HOW TO ADD YOUR VIDEO:
+                        ============================================
+                        Save your video file as: high-on-art-video.mp4
+                        Upload it to your GitHub repo (in the same folder as index.html)
+                        
+                        Option 1: Local file (recommended)
+                        <video controls autoplay muted loop>
+                            <source src="high-on-art-video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        
+                        Option 2: YouTube embed (replace VIDEO_ID with your video ID)
+                        <iframe 
+                            src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID"
+                            allow="autoplay; encrypted-media"
+                            allowfullscreen>
+                        </iframe>
+                        
+                        Option 3: Vimeo embed (replace VIDEO_ID with your video ID)
+                        <iframe 
+                            src="https://player.vimeo.com/video/VIDEO_ID?autoplay=1&loop=1"
+                            allow="autoplay; fullscreen"
+                            allowfullscreen>
+                        </iframe>
+                        ============================================
+                    -->
+
+                    <!-- LOCAL VIDEO (default) – Replace with your file name -->
+                    <video controls autoplay muted loop playsinline>
+                        <source src="high-on-art-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <!-- 
+                        YouTube embed (uncomment to use – replace VIDEO_ID)
+                        <iframe 
+                            src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID"
+                            title="High On Art Events"
+                            allow="autoplay; encrypted-media"
+                            allowfullscreen>
+                        </iframe>
+                    -->
+
+                    <!-- 
+                        Vimeo embed (uncomment to use – replace VIDEO_ID)
+                        <iframe 
+                            src="https://player.vimeo.com/video/VIDEO_ID?autoplay=1&loop=1"
+                            title="High On Art Events"
+                            allow="autoplay; fullscreen"
+                            allowfullscreen>
+                        </iframe>
+                    -->
+                </div>
+
+                <div class="events-description">
+                    <p>✨ High On Art presents immersive experiences where creativity meets the divine. ✨</p>
+                    <p>Join us for curated events featuring visionary artists, live performances, and transformative art encounters.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Your name is your first gift – let it speak your destiny</p>
+        </footer>
     </div>
-
-           <!-- ===== EVENTS PAGE (UPDATED - with highonartstretched.png) ===== -->
-    <div id="events" class="page">
-        <div class="container">
-            <h2>🎬 Wealth Creative Entertainment</h2>
-            <div class="content-card">
-                <div class="events-grid">
-                    <div class="event-card">
-                        <!-- LANDSCAPE POSTER (NEW - highonartstretched.png) -->
-                        <img src="images/highonartstretched.png" 
-                             alt="High On Art - Landscape Poster" 
-                             class="event-banner event-banner-landscape"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                        <div class="banner-placeholder" style="display:none; background: var(--vintage-gold); height: 200px; align-items: center; justify-content: center; color: var(--deep-burgundy); font-weight: bold; font-size: 1.3rem; border-radius: 10px 10px 0 0;">
-                            🎨 High On Art - Landscape
-                        </div>
-
-                        <!-- ORIGINAL BANNER IMAGE -->
-                        <img src="images/wealthcreativeentertainment.jpg" 
-                             alt="Wealth Creative Entertainment" 
-                             class="event-banner"
-                             onerror="this.style.display='none';" />
-
-                        <!-- CENTERED TITLE -->
-                        <h3 style="text-align: center;">High On Art</h3>
-
-                        <!-- CENTERED DESCRIPTION -->
-                        <p style="text-align: center;">An exclusive lifestyle experience where art, culture, music, and nature come together. Presented by Wealth Creative Entertainment.</p>
-
-                        <!-- LOGO (smaller) -->
-                        <div class="event-logo" style="text-align: center;">
-                            <img src="images/highonart.png" 
-                                 alt="High On Art" 
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-                            <div class="logo-placeholder" style="display:none; background: var(--cherry-blossom); padding: 0.8rem; border-radius: 8px; text-align: center; font-weight: bold; color: var(--dark-cherry); font-size: 1rem;">
-                                🎨 HIGH ON ART
-                            </div>
-                        </div>
-
-                        <!-- TICKET BUTTON (centered) -->
-                        <div style="text-align: center; margin-top: 1rem;">
-                            <a href="https://www.webtickets.co.za/v2/event.aspx?itemid=1597399429" target="_blank" class="event-button">Get Tickets</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- CONTACT PAGE -->
-    <div id="contact" class="page">
-        <div class="container">
-            <h2>Connect With Me</h2>
-            <div class="content-card">
-                <h3>Let's Create Magic Together</h3>
-                <div class="social-links">
-                    <a href="https://instagram.com/XavieraWealth" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://tiktok.com/@xavierawealth_official" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://music.apple.com/za/artist/xaviera/1713989611" target="_blank" title="Apple Music"><i class="fab fa-apple"></i></a>
-                </div>
-                <div class="contact-info">
-                    <h4>Get In Touch</h4>
-                    <p><i class="fas fa-envelope"></i> info.xavierawealth@gmail.com</p>
-                    <p><i class="fas fa-envelope"></i> executive.xavierawealth@outlook.com</p>
-                </div>
-                <div class="cheris-callout">
-                    For Ma Cheris – my loves, my eternal inspiration
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-            document.getElementById(pageId).classList.add('active');
-            window.scrollTo(0, 0);
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-            showPage('home');
-        });
-    </script>
 </body>
 </html>
