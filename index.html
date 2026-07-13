@@ -1,155 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aurelius – Name & Destiny Oracle</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
-    <!-- Load Name Database First -->
-    <script src="names.js"></script>
-    <!-- Then Main Script -->
-    <script src="script.js"></script>
-</head>
-<body>
-    <!-- ===== PORTAL BACKGROUND (hidden initially) ===== -->
-    <div id="portalBg" class="portal-bg">
-        <div class="portal-ring"></div>
-        <div class="portal-ring"></div>
-        <div class="portal-ring"></div>
-        <div class="portal-ring"></div>
-        <div class="portal-ring"></div>
-        <div class="portal-spiral"></div>
-        <div class="portal-core"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-    </div>
-
-    <div class="container" id="mainContainer">
-        <header>
-            <div class="logo">
-                <h1>AURELIUS</h1>
-                <div class="panther-mark"></div>
-            </div>
-            <p class="tagline">Unlock the meaning, origin &amp; destiny of your name</p>
-        </header>
-
-        <main>
-            <!-- ===== NAME ORACLE SECTION ===== -->
-            <div class="hero-section">
-                <div class="search-container" id="searchContainer">
-                    <h2>What's Your True Name?</h2>
-                    <div class="search-box">
-                        <input type="text" id="fullName" placeholder="Enter your full name..." />
-
-                        <div class="gender-select">
-                            <label>
-                                <input type="radio" name="gender" value="female" checked />
-                                Female
-                            </label>
-                            <label>
-                                <input type="radio" name="gender" value="male" />
-                                Male
-                            </label>
+    <!-- ===== EVENTS PAGE (with High On Art video) ===== -->
+    <div id="events" class="page">
+        <div class="container">
+            <h2>🎬 Wealth Creative Entertainment</h2>
+            <div class="content-card">
+                <div class="events-grid">
+                    <div class="event-card">
+                        <!-- LANDSCAPE POSTER -->
+                        <img src="images/highonartstretched.png" 
+                             alt="High On Art - Landscape Poster" 
+                             class="event-banner event-banner-landscape"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <div class="banner-placeholder" style="display:none; background: var(--vintage-gold); height: 200px; align-items: center; justify-content: center; color: var(--deep-burgundy); font-weight: bold; font-size: 1.3rem; border-radius: 10px 10px 0 0;">
+                            🎨 High On Art - Landscape
                         </div>
 
-                        <div class="birthdate">
-                            <input type="date" id="birthDate" />
-                            <small>Optional – Life Path Number &amp; Star Sign</small>
+                        <!-- HIGH ON ART VIDEO (NEW) -->
+                        <div class="event-video-container">
+                            <video controls class="event-video" poster="images/highonartstretched.png">
+                                <source src="images/high-on-art-video.mp4" type="video/mp4" />
+                                Your browser does not support the video element.
+                            </video>
                         </div>
 
-                        <button onclick="revealPath()">Reveal Your Path</button>
-                    </div>
+                        <!-- ORIGINAL BANNER IMAGE -->
+                        <img src="images/wealthcreativeentertainment.jpg" 
+                             alt="Wealth Creative Entertainment" 
+                             class="event-banner"
+                             onerror="this.style.display='none';" />
 
-                    <div id="result" class="result-box">
-                        <p class="placeholder">
-                            Your divine reading will appear here.
-                        </p>
+                        <!-- CENTERED TITLE -->
+                        <h3 style="text-align: center;">High On Art</h3>
+
+                        <!-- CENTERED DESCRIPTION -->
+                        <p style="text-align: center;">An exclusive lifestyle experience where art, culture, music, and nature come together. Presented by Wealth Creative Entertainment.</p>
+
+                        <!-- LOGO (smaller) -->
+                        <div class="event-logo" style="text-align: center;">
+                            <img src="images/highonart.png" 
+                                 alt="High On Art" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                            <div class="logo-placeholder" style="display:none; background: var(--cherry-blossom); padding: 0.8rem; border-radius: 8px; text-align: center; font-weight: bold; color: var(--dark-cherry); font-size: 1rem;">
+                                🎨 HIGH ON ART
+                            </div>
+                        </div>
+
+                        <!-- TICKET BUTTON (centered) -->
+                        <div style="text-align: center; margin-top: 1rem;">
+                            <a href="https://www.webtickets.co.za/v2/event.aspx?itemid=1597399429" target="_blank" class="event-button">Get Tickets</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- ===== EVENTS SECTION – HIGH ON ART VIDEO ===== -->
-            <section class="events-section">
-                <div class="events-header">
-                    <h2>✦ HIGH ON ART EVENTS ✦</h2>
-                    <p>Experience the fusion of art, music, and divine energy</p>
-                </div>
-
-                <div class="video-container">
-                    <!-- 
-                        ============================================
-                        HOW TO ADD YOUR VIDEO:
-                        ============================================
-                        Save your video file as: high-on-art-video.mp4
-                        Upload it to your GitHub repo (in the same folder as index.html)
-                        
-                        Option 1: Local file (recommended)
-                        <video controls autoplay muted loop>
-                            <source src="high-on-art-video.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        
-                        Option 2: YouTube embed (replace VIDEO_ID with your video ID)
-                        <iframe 
-                            src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID"
-                            allow="autoplay; encrypted-media"
-                            allowfullscreen>
-                        </iframe>
-                        
-                        Option 3: Vimeo embed (replace VIDEO_ID with your video ID)
-                        <iframe 
-                            src="https://player.vimeo.com/video/VIDEO_ID?autoplay=1&loop=1"
-                            allow="autoplay; fullscreen"
-                            allowfullscreen>
-                        </iframe>
-                        ============================================
-                    -->
-
-                    <!-- LOCAL VIDEO (default) – Replace with your file name -->
-                    <video controls autoplay muted loop playsinline>
-                        <source src="high-on-art-video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-
-                    <!-- 
-                        YouTube embed (uncomment to use – replace VIDEO_ID)
-                        <iframe 
-                            src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID"
-                            title="High On Art Events"
-                            allow="autoplay; encrypted-media"
-                            allowfullscreen>
-                        </iframe>
-                    -->
-
-                    <!-- 
-                        Vimeo embed (uncomment to use – replace VIDEO_ID)
-                        <iframe 
-                            src="https://player.vimeo.com/video/VIDEO_ID?autoplay=1&loop=1"
-                            title="High On Art Events"
-                            allow="autoplay; fullscreen"
-                            allowfullscreen>
-                        </iframe>
-                    -->
-                </div>
-
-                <div class="events-description">
-                    <p>✨ High On Art presents immersive experiences where creativity meets the divine. ✨</p>
-                    <p>Join us for curated events featuring visionary artists, live performances, and transformative art encounters.</p>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p>Your name is your first gift – let it speak your destiny</p>
-        </footer>
+        </div>
     </div>
-</body>
-</html>
